@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;karate/src/test/java/feature/sample.feature&apos; to &apos;1_GetToken_API.feature&apos;" description="Rename resource &apos;sample.feature&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/java/feature/sample.feature" name="1_GetToken_API.feature" stamp="1728497274695" updateReferences="true"/>
+</session>

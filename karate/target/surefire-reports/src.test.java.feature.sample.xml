@@ -1,0 +1,84 @@
+<testsuite failures="3" name="src/test/java/feature/sample.feature" skipped="0" tests="3" time="3.570164">
+  <testcase classname="src.test.java.feature.sample" name="Test sample with Valid Credetial" time="2.346925">
+    <failure message="sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof&#10;(JsonData.statusCode&#10;                    ^ in &lt;eval&gt; at line number 1 at column number 20&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "rishabhagent", "password": "P@ssw0rd" } ...... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) ........... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at ✽.And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) (sample.feature:13)</failure>
+  </testcase>
+  <testcase classname="src.test.java.feature.sample" name="Test sample with Negative Credential" time="0.618956">
+    <failure message="sample.feature:11 - status code was: 400, expected: 401, response time: 601, url: https://sprint.xprizo.com/api/Security/GetToken, response: {&quot;errorCode&quot;:125,&quot;message&quot;:&quot;Invalid login credentials&quot;,&quot;timestamp&quot;:&quot;2024-10-09T18:06:00.7081267+00:00&quot;,&quot;statusCode&quot;:400,&quot;status&quot;:&quot;BadRequest&quot;}">* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "rishabhagent", "password": "P@ssw0rd" } ...... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) ........... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at ✽.And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) (sample.feature:13)
+
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "user2", "password": "wrongPass" } ............ passed
+When method POST .......................................................... passed
+Then status 401 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:11 - status code was: 400, expected: 401, response time: 601, url: https://sprint.xprizo.com/api/Security/GetToken, response: {"errorCode":125,"message":"Invalid login credentials","timestamp":"2024-10-09T18:06:00.7081267+00:00","statusCode":400,"status":"BadRequest"}
+	at ✽.Then status 401 (sample.feature:11)
+
+* print JsonData = response ............................................... skipped
+And match (JsonData.statusCode == Unauthorized &amp;&amp; JsonData.status == ) .... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.feature.sample" name="Test sample with " time="0.604284">
+    <failure message="sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof&#10;(JsonData.statusCode&#10;                    ^ in &lt;eval&gt; at line number 1 at column number 20&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "rishabhagent", "password": "P@ssw0rd" } ...... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) ........... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at ✽.And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null) (sample.feature:13)
+
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "user2", "password": "wrongPass" } ............ passed
+When method POST .......................................................... passed
+Then status 401 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:11 - status code was: 400, expected: 401, response time: 601, url: https://sprint.xprizo.com/api/Security/GetToken, response: {"errorCode":125,"message":"Invalid login credentials","timestamp":"2024-10-09T18:06:00.7081267+00:00","statusCode":400,"status":"BadRequest"}
+	at ✽.Then status 401 (sample.feature:11)
+
+* print JsonData = response ............................................... skipped
+And match (JsonData.statusCode == Unauthorized &amp;&amp; JsonData.status == ) .... skipped
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request { "userName": "user3", "password": "null" } ................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match (JsonData.statusCode == Bad Request &amp;&amp; JsonData.status == ) ..... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at ✽.And match (JsonData.statusCode == Bad Request &amp;&amp; JsonData.status == ) (sample.feature:13)</failure>
+  </testcase>
+</testsuite>

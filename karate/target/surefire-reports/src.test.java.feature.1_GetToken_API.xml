@@ -1,0 +1,308 @@
+<testsuite failures="0" name="src/test/java/feature/1_GetToken_API.feature" skipped="0" tests="8" time="7.836504">
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Invalid Credential" time="0.762236">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Invalid Username" time="0.63536">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Invalid Password" time="0.682623">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Username length &lt; 3" time="0.720652">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Username length &gt; 50" time="2.083593">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Username null" time="0.789235">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Password null" time="0.910617">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 214 ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.feature.1_GetToken_API" name="Test GetToken API with Valid Credetial" time="1.252188">
+    <system-out>* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 196 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 125 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+* print JsonData = response ............................................... passed
+And match JsonData.statusCode == 400 ...................................... passed
+And match JsonData.status == 'BadRequest' ................................. passed
+And match JsonData.errorCode == 214 ....................................... passed
+* url baseURL + '/api/Security/GetToken' .................................. passed
+Given request ............................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print JsonData = response ............................................... passed
+* def token = JsonData.token .............................................. passed
+* karate.set('token', token) .............................................. passed
+* print token ............................................................. passed
+And match JsonData.statusCode == 0 ........................................ passed
+And match JsonData.status == null ......................................... passed</system-out>
+  </testcase>
+</testsuite>

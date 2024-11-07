@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.feature.sample</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">3</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2024-10-09 11:36:01 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1.1:18]">[1.1:18] Test sample with Valid Credetial </a>
+</div>
+<div class="nav-item failed">
+<a href="#[1.2:19]">[1.2:19] Test sample with Negative Credential </a>
+</div>
+<div class="nav-item failed">
+<a href="#[1.3:20]">[1.3:20] Test sample with  </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/feature/sample.feature</span><span class="feature-description">Test sample with dynamic payload, status, and error message</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.1:18]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.1:18]</span><span class="scenario-name">Test sample with Valid Credetial </span>
+</div>
+<div class="scenario-time failed">ms: 2347</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1.1:18]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1.1:18]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1.1:18]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="1">23:35:57.642 Given:</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">Given request { "userName": "rishabhagent", "password": "P@ssw0rd" }</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">2307</div>
+</div>
+<div class="preformatted" data-parent="3">23:35:58.670 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 49
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"rishabhagent","password":"P@ssw0rd"}
+
+23:36:00.089 response time in milliseconds: 1411.01
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 09 Oct 2024 18:05:59 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"id":455,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjd9IiwiaGFzaCI6IjdjMGYyMWJkLTM3MDItNDc1NC04NzdiLTBlZTUwODFlNTAzYi0yMjMuMTkwLjg0LjkzIiwiZXhwIjoxNzI4NDk4OTYwLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.1AiFIX0l9Ize5l2wVx6f-4VxUU5jy56KW3W8st9ZcD4","statusCode":0,"status":null,"expires":"2024-10-09T18:36:00.0025262+00:00"}</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">23</div>
+</div>
+<div class="preformatted" data-parent="5">23:36:00.114 [print] {
+  "expires": "2024-10-09T18:36:00.0025262+00:00",
+  "id": 455,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjd9IiwiaGFzaCI6IjdjMGYyMWJkLTM3MDItNDc1NC04NzdiLTBlZTUwODFlNTAzYi0yMjMuMTkwLjg0LjkzIiwiZXhwIjoxNzI4NDk4OTYwLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.1AiFIX0l9Ize5l2wVx6f-4VxUU5jy56KW3W8st9ZcD4",
+  "statusCode": 0,
+  "status": null
+}</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref failed">6</div>
+<div class="step-cell failed">And match (JsonData.statusCode == 0 &amp;&amp; JsonData.status == null)</div>
+</div>
+<div class="time-cell failed">8</div>
+</div>
+<div class="preformatted" data-parent="6">sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.2:19]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.2:19]</span><span class="scenario-name">Test sample with Negative Credential </span>
+</div>
+<div class="scenario-time failed">ms: 619</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1.2:19]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1.2:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1.2:19]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="7">23:36:00.145 Given:</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">Given request { "userName": "user2", "password": "wrongPass" }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">617</div>
+</div>
+<div class="preformatted" data-parent="9">23:36:00.166 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 43
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"user2","password":"wrongPass"}
+
+23:36:00.768 response time in milliseconds: 601.09
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 09 Oct 2024 18:05:59 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-09T18:06:00.7081267+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials"}</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref failed">10</div>
+<div class="step-cell failed">Then status 401</div>
+</div>
+<div class="time-cell failed">1</div>
+</div>
+<div class="preformatted" data-parent="10">23:36:00.771 status code was: 400, expected: 401, response time: 601, url: https://sprint.xprizo.com/api/Security/GetToken, response: {"errorCode":125,"message":"Invalid login credentials","timestamp":"2024-10-09T18:06:00.7081267+00:00","statusCode":400,"status":"BadRequest"}
+sample.feature:11 - status code was: 400, expected: 401, response time: 601, url: https://sprint.xprizo.com/api/Security/GetToken, response: {"errorCode":125,"message":"Invalid login credentials","timestamp":"2024-10-09T18:06:00.7081267+00:00","statusCode":400,"status":"BadRequest"}</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref skipped">11</div>
+<div class="step-cell skipped">* print JsonData = response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref skipped">12</div>
+<div class="step-cell skipped">And match (JsonData.statusCode == Unauthorized &amp;&amp; JsonData.status == )</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.3:20]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [1.3:20]</span><span class="scenario-name">Test sample with  </span>
+</div>
+<div class="scenario-time failed">ms: 604</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1.3:20]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1.3:20]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1.3:20]bg">
+<div class="step-container" id="13">
+<div class="step-ref bg-step">13</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="13">23:36:00.783 Given:</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">Given request { "userName": "user3", "password": "null" }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">600</div>
+</div>
+<div class="preformatted" data-parent="15">23:36:00.789 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 38
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"user3","password":"null"}
+
+23:36:01.387 response time in milliseconds: 593.64
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 09 Oct 2024 18:06:01 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-09T18:06:01.2671446+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials"}</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="17">23:36:01.389 [print] {
+  "errorCode": 125,
+  "message": "Invalid login credentials",
+  "timestamp": "2024-10-09T18:06:01.2671446+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref failed">18</div>
+<div class="step-cell failed">And match (JsonData.statusCode == Bad Request &amp;&amp; JsonData.status == )</div>
+</div>
+<div class="time-cell failed">0</div>
+</div>
+<div class="preformatted" data-parent="18">sample.feature:13 - evaluation (js) failed: (JsonData.statusCode, javax.script.ScriptException: &lt;eval&gt;:1:20 Expected ) but found eof
+(JsonData.statusCode
+                    ^ in &lt;eval&gt; at line number 1 at column number 20
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

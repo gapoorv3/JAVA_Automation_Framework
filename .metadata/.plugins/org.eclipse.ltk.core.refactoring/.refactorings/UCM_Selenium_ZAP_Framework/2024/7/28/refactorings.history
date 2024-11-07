@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UCM_Selenium_ZAP_Framework/ExcelData/data.xlsx&apos; to &apos;testData.xlsx&apos;" description="Rename resource &apos;data.xlsx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ExcelData/data.xlsx" name="testData.xlsx" stamp="1720362524378" updateReferences="true"/>
+</session>

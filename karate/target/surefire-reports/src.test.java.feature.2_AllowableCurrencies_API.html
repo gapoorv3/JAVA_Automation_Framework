@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.feature.2_AllowableCurrencies_API</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2024-10-17 02:09:27 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:9]">[1:9] Test AllowableCurrencies API with positive scenario </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/feature/2_AllowableCurrencies_API.feature</span><span class="feature-description">Test AllowableCurrencies API with dynamic payload, status and error messages</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:9]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:9]</span><span class="scenario-name">Test AllowableCurrencies API with positive scenario </span>
+</div>
+<div class="scenario-time passed">ms: 5180</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:9]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def token = karate.get('authToken')</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="preformatted" data-parent="1">14:09:22.079 &lt;&lt; lock released, cached callSingle: classpath:src/test/java/feature/1_GetToken_API.feature
+14:09:22.087 Token API response: {
+  "__num": 0,
+  "expectedStatusCode": "0",
+  "author": "Apoorv Gupta",
+  "responseTime": 1504,
+  "authToken": null,
+  "expectedStatus": "null",
+  "expectedHTTPStatusCode": "200",
+  "responseStatus": 200,
+  "__loop": -1,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA",
+  "__arg": {
+    "author": "Apoorv Gupta",
+    "baseURL": "https://sprint.xprizo.com",
+    "authToken": null
+  },
+  "baseURL": "https://sprint.xprizo.com",
+  "password": "P@ssw0rd",
+  "responseType": "json",
+  "responseHeaders": {
+    "Content-Type": [
+      "application/json; charset=utf-8"
+    ],
+    "Date": [
+      "Thu, 17 Oct 2024 08:39:22 GMT"
+    ],
+    "Server": [
+      "Microsoft-IIS/10.0"
+    ],
+    "Set-Cookie": [
+      "ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com",
+      "ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com"
+    ],
+    "Transfer-Encoding": [
+      "chunked"
+    ],
+    "Vary": [
+      "Accept-Encoding"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000; includeSubDomains; preload"
+    ],
+    "Request-Context": [
+      "appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca"
+    ],
+    "X-Frame-Options": [
+      "SAMEORIGIN"
+    ],
+    "Content-Security-Policy": [
+      "frame-ancestors 'self';"
+    ],
+    "X-XSS-Protection": [
+      "1; mode=block"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "Referrer-Policy": [
+      "origin"
+    ],
+    "Permissions-Policy": [
+      "geolocation=(self), microphone=()"
+    ],
+    "api-supported-versions": [
+      "1.0"
+    ],
+    "X-Powered-By": [
+      "ASP.NET"
+    ]
+  },
+  "response": {
+    "expires": "2024-10-17T09:09:22.0667565+00:00",
+    "id": 455,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA",
+    "statusCode": 0,
+    "status": null
+  },
+  "requestTimeStamp": 1729154360512,
+  "__row": {
+    "ScenarioType": "Valid Credetial",
+    "username": "rishabhagent",
+    "password": "P@ssw0rd",
+    "expectedHTTPStatusCode": "200",
+    "expectedStatusCode": "0",
+    "expectedStatus": "null"
+  },
+  "ScenarioType": "Valid Credetial",
+  "responseCookies": {
+    "ARRAffinity": {
+      "name": "ARRAffinity",
+      "value": "ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd",
+      "domain": "sprint.xprizo.com",
+      "path": "/",
+      "persistent": "false",
+      "secure": "true"
+    },
+    "ARRAffinitySameSite": {
+      "name": "ARRAffinitySameSite",
+      "value": "ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd",
+      "domain": "sprint.xprizo.com",
+      "path": "/",
+      "persistent": "false",
+      "secure": "true"
+    }
+  },
+  "username": "rishabhagent"
+}
+ 
+14:09:22.105 Environment:  
+14:09:22.121 Final config: {
+  "author": "Apoorv Gupta",
+  "baseURL": "https://sprint.xprizo.com",
+  "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="1.1">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">src/test/java/feature/1_GetToken_API.feature</div>
+</div>
+<div class="time-cell passed">7134</div>
+</div>
+<div class="callarg-container" data-parent="1.1">
+<div class="step-ref"> 
+</div>
+<div class="preformatted">{
+  "author": "Apoorv Gupta",
+  "baseURL": "https://sprint.xprizo.com",
+  "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA"
+}
+</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">14</div>
+</div>
+<div class="preformatted" data-parent="2">14:09:14.641 &gt;&gt; lock acquired, begin callSingle: classpath:src/test/java/feature/1_GetToken_API.feature</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="preformatted" data-parent="3">{ 
+	"userName": InvalidUsername, 
+	"password": InvalidPassword
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">2221</div>
+</div>
+<div class="preformatted" data-parent="4">14:09:15.882 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 59
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"InvalidUsername","password":"InvalidPassword"}
+
+14:09:17.149 response time in milliseconds: 1262.99
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:17 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:17.1902134+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">20</div>
+</div>
+<div class="preformatted" data-parent="6">14:09:17.172 [print] {
+  "errorCode": 125,
+  "message": "Invalid login credentials",
+  "timestamp": "2024-10-17T08:39:17.1902134+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">21</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="9">
+<div class="step-ref bg-step">9</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 125</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="10">
+<div class="step-ref bg-step">10</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="11">
+<div class="step-ref bg-step">11</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="11">{ 
+	"userName": InvalidUsername, 
+	"password": P@ssw0rd
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="12">
+<div class="step-ref bg-step">12</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">555</div>
+</div>
+<div class="preformatted" data-parent="12">14:09:17.229 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 52
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"InvalidUsername","password":"P@ssw0rd"}
+
+14:09:17.780 response time in milliseconds: 548.77
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:17 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:17.841617+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="13">
+<div class="step-ref bg-step">13</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="14">
+<div class="step-ref bg-step">14</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="14">14:09:17.782 [print] {
+  "errorCode": 125,
+  "message": "Invalid login credentials",
+  "timestamp": "2024-10-17T08:39:17.841617+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="15">
+<div class="step-ref bg-step">15</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="16">
+<div class="step-ref bg-step">16</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="17">
+<div class="step-ref bg-step">17</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 125</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="18">
+<div class="step-ref bg-step">18</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="19">
+<div class="step-ref bg-step">19</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="19">{ 
+	"userName": rishabhagent, 
+	"password": InvalidPassword
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="20">
+<div class="step-ref bg-step">20</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">562</div>
+</div>
+<div class="preformatted" data-parent="20">14:09:17.797 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 56
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"rishabhagent","password":"InvalidPassword"}
+
+14:09:18.356 response time in milliseconds: 557.31
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:18 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:18.4146241+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials (1)"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="21">
+<div class="step-ref bg-step">21</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="22">
+<div class="step-ref bg-step">22</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="22">14:09:18.360 [print] {
+  "errorCode": 125,
+  "message": "Invalid login credentials (1)",
+  "timestamp": "2024-10-17T08:39:18.4146241+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="23">
+<div class="step-ref bg-step">23</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="24">
+<div class="step-ref bg-step">24</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="25">
+<div class="step-ref bg-step">25</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 125</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="26">
+<div class="step-ref bg-step">26</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="27">
+<div class="step-ref bg-step">27</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="27">{ 
+	"userName": ri, 
+	"password": P@ssw0rd
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="28">
+<div class="step-ref bg-step">28</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">500</div>
+</div>
+<div class="preformatted" data-parent="28">14:09:18.379 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 39
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"ri","password":"P@ssw0rd"}
+
+14:09:18.877 response time in milliseconds: 496.33
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:18 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:18.9393384+00:00","statusCode":400,"status":"BadRequest","errorCode":196,"message":"Name must be between 2 and 50 characters"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="29">
+<div class="step-ref bg-step">29</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="30">
+<div class="step-ref bg-step">30</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="30">14:09:18.879 [print] {
+  "errorCode": 196,
+  "message": "Name must be between 2 and 50 characters",
+  "timestamp": "2024-10-17T08:39:18.9393384+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="31">
+<div class="step-ref bg-step">31</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="32">
+<div class="step-ref bg-step">32</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="33">
+<div class="step-ref bg-step">33</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 196</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="34">
+<div class="step-ref bg-step">34</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="35">
+<div class="step-ref bg-step">35</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="35">{ 
+	"userName": riwdwdwddwdwdwdwdwddwdwdwdwdwdwqwqwqqwqwqsqqsqsqsqs, 
+	"password": P@ssw0rd
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="36">
+<div class="step-ref bg-step">36</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">497</div>
+</div>
+<div class="preformatted" data-parent="36">14:09:18.896 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 88
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"riwdwdwddwdwdwdwdwddwdwdwdwdwdwqwqwqqwqwqsqqsqsqsqs","password":"P@ssw0rd"}
+
+14:09:19.390 response time in milliseconds: 493.02
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:19 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:19.453458+00:00","statusCode":400,"status":"BadRequest","errorCode":196,"message":"Name must be between 2 and 50 characters"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="37">
+<div class="step-ref bg-step">37</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="38">
+<div class="step-ref bg-step">38</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="38">14:09:19.392 [print] {
+  "errorCode": 196,
+  "message": "Name must be between 2 and 50 characters",
+  "timestamp": "2024-10-17T08:39:19.453458+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="39">
+<div class="step-ref bg-step">39</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="40">
+<div class="step-ref bg-step">40</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="41">
+<div class="step-ref bg-step">41</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 196</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="42">
+<div class="step-ref bg-step">42</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">35</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="43">
+<div class="step-ref bg-step">43</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="43">{ 
+	"userName": null, 
+	"password": P@ssw0rd
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="44">
+<div class="step-ref bg-step">44</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">526</div>
+</div>
+<div class="preformatted" data-parent="44">14:09:19.440 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 39
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":null,"password":"P@ssw0rd"}
+
+14:09:19.963 response time in milliseconds: 522.23
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:19 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:20.0273692+00:00","statusCode":400,"status":"BadRequest","errorCode":125,"message":"Invalid login credentials"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="45">
+<div class="step-ref bg-step">45</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="46">
+<div class="step-ref bg-step">46</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="46">14:09:19.967 [print] {
+  "errorCode": 125,
+  "message": "Invalid login credentials",
+  "timestamp": "2024-10-17T08:39:20.0273692+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="47">
+<div class="step-ref bg-step">47</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="48">
+<div class="step-ref bg-step">48</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="49">
+<div class="step-ref bg-step">49</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 125</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="50">
+<div class="step-ref bg-step">50</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="51">
+<div class="step-ref bg-step">51</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="51">{ 
+	"userName": rishabhagent, 
+	"password": null
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="52">
+<div class="step-ref bg-step">52</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">509</div>
+</div>
+<div class="preformatted" data-parent="52">14:09:19.979 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 43
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"rishabhagent","password":null}
+
+14:09:20.485 response time in milliseconds: 503.58
+1 &lt; 400
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json
+1 &lt; Date: Thu, 17 Oct 2024 08:39:20 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"timestamp":"2024-10-17T08:39:20.5482287+00:00","statusCode":400,"status":"BadRequest","errorCode":214,"message":"Password required"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="53">
+<div class="step-ref bg-step">53</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="54">
+<div class="step-ref bg-step">54</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="54">14:09:20.488 [print] {
+  "errorCode": 214,
+  "message": "Password required",
+  "timestamp": "2024-10-17T08:39:20.5482287+00:00",
+  "statusCode": 400,
+  "status": "BadRequest"
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="55">
+<div class="step-ref bg-step">55</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 400</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="56">
+<div class="step-ref bg-step">56</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == 'BadRequest'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="57">
+<div class="step-ref bg-step">57</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.errorCode == 214</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># Setting up common data for each scenario</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="58">
+<div class="step-ref bg-step">58</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* url baseURL + '/api/Security/GetToken'</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="59">
+<div class="step-ref bg-step">59</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given request</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="59">{ 
+	"userName": rishabhagent, 
+	"password": P@ssw0rd
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="60">
+<div class="step-ref bg-step">60</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">1515</div>
+</div>
+<div class="preformatted" data-parent="60">14:09:20.512 request:
+1 &gt; POST https://sprint.xprizo.com/api/Security/GetToken
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 49
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+{"userName":"rishabhagent","password":"P@ssw0rd"}
+
+14:09:22.022 response time in milliseconds: 1503.73
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 17 Oct 2024 08:39:22 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+{"id":455,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA","statusCode":0,"status":null,"expires":"2024-10-17T09:09:22.0667565+00:00"}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="61">
+<div class="step-ref bg-step">61</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="62">
+<div class="step-ref bg-step">62</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print JsonData = response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="62">14:09:22.028 [print] {
+  "expires": "2024-10-17T09:09:22.0667565+00:00",
+  "id": 455,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA",
+  "statusCode": 0,
+  "status": null
+}</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="63">
+<div class="step-ref bg-step">63</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def token = JsonData.token</div>
+</div>
+<div class="time-cell passed">27</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="64">
+<div class="step-ref bg-step">64</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* karate.set('token', token)</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="65">
+<div class="step-ref bg-step">65</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print token</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="65">14:09:22.061 [print] eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="66">
+<div class="step-ref bg-step">66</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.statusCode == 0</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="67">
+<div class="step-ref bg-step">67</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And match JsonData.status == null</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="68">
+<div class="step-ref bg-step">68</div>
+<div class="step-cell passed">* url baseURL + "/api/Preference/AllowableCurrencies"</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="69">
+<div class="step-ref bg-step">69</div>
+<div class="step-cell passed">* print 'Token: ', token</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="preformatted" data-parent="69">14:09:22.147 [print] Token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA</div>
+<div class="step-row">
+<div class="step-container" id="70">
+<div class="step-ref passed">70</div>
+<div class="step-cell passed">Given header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="71">
+<div class="step-ref passed">71</div>
+<div class="step-cell passed">And header Authorization = 'Bearer ' + token</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="72">
+<div class="step-ref passed">72</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">5143</div>
+</div>
+<div class="preformatted" data-parent="72">14:09:22.163 request:
+1 &gt; GET https://sprint.xprizo.com/api/Preference/AllowableCurrencies
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1NSIsInVzZXJOYW1lIjoicmlzaGFiaGFnZW50Iiwicm9sZSI6IkFnZW50Iiwicm9sZU5hbWUiOiJBZ2VudCIsImFjY2VzcyI6IntcIjQxM1wiOjEsXCIyNDdcIjozLFwiNTUxXCI6NSxcIjU0MlwiOjcsXCI1NzZcIjoxLFwiNjAxXCI6NCxcIjY1NFwiOjQsXCI2OTlcIjo3LFwiNzQzXCI6NyxcIjQyNFwiOjcsXCI3NzBcIjo3LFwiOTY3XCI6NyxcIjEwMDFcIjo3LFwiMTAwMlwiOjcsXCIxMDQzXCI6N30iLCJoYXNoIjoiNmJjNWY3NzItYTQxMy00ODY2LWJiMjItNjVjMzNmNzIyNjlhLTIyMy4yNTUuMjQ1LjY2IiwiZXhwIjoxNzI5MTU2MTYyLCJpc3MiOiJ4cHJpem8uY29tIiwiYXVkIjoieHByaXpvLmNvbSJ9.pt81pQRFEtC9wjkTp1uWrfETrIfSwp4kHalH3EjH9zA
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: sprint.xprizo.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_421)
+
+14:09:27.302 response time in milliseconds: 5136.44
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors 'self';
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 17 Oct 2024 08:39:27 GMT
+1 &lt; Permissions-Policy: geolocation=(self), microphone=()
+1 &lt; Referrer-Policy: origin
+1 &lt; Request-Context: appId=cid-v1:d826e33e-646a-4c6c-8fce-698bb9725cca
+1 &lt; Server: Microsoft-IIS/10.0
+1 &lt; Set-Cookie: [ARRAffinity=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;Secure;Domain=sprint.xprizo.com, ARRAffinitySameSite=ff3589f8701548000f18b36d83a9608dd1dca545d591bcbd8d6eeb12991d85fd;Path=/;HttpOnly;SameSite=None;Secure;Domain=sprint.xprizo.com]
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; api-supported-versions: 1.0
+[{"isActive":true,"code":"ARS","name":"Pesos","fullName":"Argentina Pesos","symbol":"AR$","rate":974.83,"dailyWithdrawalLimit":0.00,"agentWithdrawalFee":"","transferFee":3.50,"depositTypes":[],"allowCurrencyExchange":true},{"isActive":true,"code":"KES","name":"Kenyan shilling","fullName":"Kenyan shilling","symbol":"KSh","rate":129.093212,"dailyWithdrawalLimit":120000.00,"agentWithdrawalFee":"","transferFee":1.00,"depositTypes":[],"allowCurrencyExchange":true},{"isActive":true,"code":"EUR","name":"Euro","fullName":"Euro Member Countries Euro","symbol":"&euro;","rate":0.91017,"dailyWithdrawalLimit":850.00,"agentWithdrawalFee":"","transferFee":0.01,"depositTypes":[],"allowCurrencyExchange":true},{"isActive":true,"code":"USD","name":"Dollar","fullName":"US Dollar","symbol":"$","rate":1,"dailyWithdrawalLimit":1000.00,"agentWithdrawalFee":"","transferFee":2.00,"depositTypes":[],"allowCurrencyExchange":true},{"isActive":true,"code":"AED","name":"Dirham","fullName":"United Arab Emirates Dirham","symbol":"د.إ","rate":3.6725,"dailyWithdrawalLimit":4000.00,"agentWithdrawalFee":"","transferFee":0.05,"depositTypes":[],"allowCurrencyExchange":true},{"isActive":true,"code":"INR","name":"Rupee","fullName":"Indian Rupee","symbol":"₹","rate":84.027621,"dailyWithdrawalLimit":100000.00,"agentWithdrawalFee":"","transferFee":1.00,"depositTypes":[],"allowCurrencyExchange":true}]</div>
+<div class="step-row">
+<div class="step-container" id="73">
+<div class="step-ref passed">73</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="74">
+<div class="step-ref passed">74</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="74">14:09:27.306 [print] [
+  {
+    "symbol": "AR$",
+    "code": "ARS",
+    "rate": 974.83,
+    "depositTypes": [
+    ],
+    "name": "Pesos",
+    "transferFee": 3.5,
+    "fullName": "Argentina Pesos",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 0.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  },
+  {
+    "symbol": "KSh",
+    "code": "KES",
+    "rate": 129.093212,
+    "depositTypes": [
+    ],
+    "name": "Kenyan shilling",
+    "transferFee": 1.0,
+    "fullName": "Kenyan shilling",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 120000.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  },
+  {
+    "symbol": "\u20AC",
+    "code": "EUR",
+    "rate": 0.91017,
+    "depositTypes": [
+    ],
+    "name": "Euro",
+    "transferFee": 0.01,
+    "fullName": "Euro Member Countries Euro",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 850.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  },
+  {
+    "symbol": "$",
+    "code": "USD",
+    "rate": 1,
+    "depositTypes": [
+    ],
+    "name": "Dollar",
+    "transferFee": 2.0,
+    "fullName": "US Dollar",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 1000.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  },
+  {
+    "symbol": "د.إ",
+    "code": "AED",
+    "rate": 3.6725,
+    "depositTypes": [
+    ],
+    "name": "Dirham",
+    "transferFee": 0.05,
+    "fullName": "United Arab Emirates Dirham",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 4000.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  },
+  {
+    "symbol": "\u20B9",
+    "code": "INR",
+    "rate": 84.027621,
+    "depositTypes": [
+    ],
+    "name": "Rupee",
+    "transferFee": 1.0,
+    "fullName": "Indian Rupee",
+    "agentWithdrawalFee": "",
+    "dailyWithdrawalLimit": 100000.0,
+    "isActive": true,
+    "allowCurrencyExchange": true
+  }
+]</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

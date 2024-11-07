@@ -1,0 +1,16 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Security/ResetPassword API (PUT)
+
+Background:
+  * url baseURL + '/api/Security/ResetPassword'
+
+Scenario: PUT /api/Security/ResetPassword
+# START GENERATED PARAMS
+  * param key = '<value>'
+  * param newPassword = '<value>'
+  * header x-api-version = '<value>'
+# END GENERATED PARAMS
+  When method PUT
+  Then status 200
+  # Add further validation here

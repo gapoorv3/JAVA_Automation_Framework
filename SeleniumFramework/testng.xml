@@ -1,0 +1,8 @@
+<suite parallel="classes" name="Suite1">
+  <test name="Test1">
+    <classes>
+      <class name="test.TestNG_Test"/>
+      <class name="test.ExtentReportsTestNG"/>
+    </classes>
+  </test> 
+</suite> 

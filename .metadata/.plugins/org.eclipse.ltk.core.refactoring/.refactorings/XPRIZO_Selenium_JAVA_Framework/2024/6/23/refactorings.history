@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;test.XprizoTest2&apos; to &apos;ZAP_XprizoTest&apos;&#x0A;- Original project: &apos;XPRIZO_Selenium_JAVA_Framework&apos;&#x0A;- Original element: &apos;test.XprizoTest2&apos;&#x0A;- Renamed element: &apos;test.ZAP_XprizoTest&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;XprizoTest2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;test{XprizoTest2.java[XprizoTest2" matchStrategy="1" name="ZAP_XprizoTest" qualified="false" references="true" similarDeclarations="false" stamp="1717698944529" textual="false" version="1.0"/>
+</session>

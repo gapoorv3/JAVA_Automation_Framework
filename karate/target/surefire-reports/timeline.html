@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"1_GetToken_API[1.1:26]","start":13332,"end":14095,"title":"1_GetToken_API[1.1:26] 05:30:13.332-05:30:14.095 Test GetToken API with Invalid Credential"},{"id":2,"group":1,"content":"1_GetToken_API[1.2:27]","start":14107,"end":14743,"title":"1_GetToken_API[1.2:27] 05:30:14.107-05:30:14.743 Test GetToken API with Invalid Username"},{"id":3,"group":1,"content":"1_GetToken_API[1.3:28]","start":14757,"end":15443,"title":"1_GetToken_API[1.3:28] 05:30:14.757-05:30:15.443 Test GetToken API with Invalid Password"},{"id":4,"group":1,"content":"1_GetToken_API[1.4:29]","start":15459,"end":16183,"title":"1_GetToken_API[1.4:29] 05:30:15.459-05:30:16.183 Test GetToken API with Username length < 3"},{"id":5,"group":1,"content":"1_GetToken_API[1.5:30]","start":16197,"end":18282,"title":"1_GetToken_API[1.5:30] 05:30:16.197-05:30:18.282 Test GetToken API with Username length > 50"},{"id":6,"group":1,"content":"1_GetToken_API[1.6:31]","start":18319,"end":19109,"title":"1_GetToken_API[1.6:31] 05:30:18.319-05:30:19.109 Test GetToken API with Username null"},{"id":7,"group":1,"content":"1_GetToken_API[1.7:32]","start":19120,"end":20035,"title":"1_GetToken_API[1.7:32] 05:30:19.120-05:30:20.035 Test GetToken API with Password null"},{"id":8,"group":1,"content":"1_GetToken_API[2.1:54]","start":20047,"end":21300,"title":"1_GetToken_API[2.1:54] 05:30:20.047-05:30:21.300 Test GetToken API with Valid Credetial"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

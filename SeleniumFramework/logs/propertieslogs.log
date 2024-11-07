@@ -1,0 +1,5 @@
+[INFO ] 2024-04-21 20:22:53.655 [main] Log4jDemo1 - This id information message
+[FATAL] 2024-04-21 20:22:53.665 [main] Log4jDemo1 - This is a fatal message
+[WARN ] 2024-04-21 20:22:53.666 [main] Log4jDemo1 - This is a warning message
+[ERROR] 2024-04-21 20:22:53.666 [main] Log4jDemo1 - This is an error message
+[TRACE] 2024-04-21 20:22:53.666 [main] Log4jDemo1 - This is a trace message
