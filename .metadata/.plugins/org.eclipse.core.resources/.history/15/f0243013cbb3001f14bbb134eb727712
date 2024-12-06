@@ -1,0 +1,17 @@
+# Auto-generated feature file
+
+Feature: /api/Wallet/StatementReport/{accountId} (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/StatementReport/{accountId}'
+
+Scenario: GET /api/Wallet/StatementReport/{accountId}
+  * path 'accountId' = '<value>'
+  * param fromDate = '<value>'
+  * param toDate = '<value>'
+  * param limit = '<value>'
+  * param format = '<value>'
+  * param includeLogs = '<value>'
+  * header x-api-version = '<value>'
+  When method GET
+  Then status 200

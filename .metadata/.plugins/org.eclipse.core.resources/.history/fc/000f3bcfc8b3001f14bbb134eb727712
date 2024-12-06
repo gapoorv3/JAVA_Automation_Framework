@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Item/AddProductPurchase (POST)
+
+Background:
+  * url baseURL + '/api/Item/AddProductPurchase'
+
+Scenario: POST /api/Item/AddProductPurchase
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

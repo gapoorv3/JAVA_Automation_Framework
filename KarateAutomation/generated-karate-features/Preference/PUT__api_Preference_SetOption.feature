@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetOption API (PUT)
+Feature: /api/Preference/SetOption (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetOption'
 
 Scenario: PUT /api/Preference/SetOption
-# START GENERATED PARAMS
-  * param name = '<value>'
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param name = '<value>' //removed
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param name = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/System/Banks API (GET)
+Feature: /api/System/Banks (GET)
 
 Background:
   * url baseURL + '/api/System/Banks'
 
 Scenario: GET /api/System/Banks
-# START GENERATED PARAMS
-  * param currencyCode = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param currencyCode = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param currencyCode = '<value>' //added

@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/SendPayment (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/SendPayment'
+
+Scenario: POST /api/Transaction/SendPayment
+  * param action = '<value>'
+  * param pin = '<value>'
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

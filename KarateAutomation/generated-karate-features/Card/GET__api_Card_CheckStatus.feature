@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/CheckStatus API (GET)
+Feature: /api/Card/CheckStatus (GET)
 
 Background:
   * url baseURL + '/api/Card/CheckStatus'
 
 Scenario: GET /api/Card/CheckStatus
-# START GENERATED PARAMS
-  * param reference = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param reference = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param reference = '<value>' //added
+  * param x-api-version = '<value>' //added

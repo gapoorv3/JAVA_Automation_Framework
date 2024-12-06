@@ -1,14 +1,12 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/HasLinkedMerchants API (GET)
+Feature: /api/Merchant/HasLinkedMerchants (GET)
 
 Background:
   * url baseURL + '/api/Merchant/HasLinkedMerchants'
 
 Scenario: GET /api/Merchant/HasLinkedMerchants
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added

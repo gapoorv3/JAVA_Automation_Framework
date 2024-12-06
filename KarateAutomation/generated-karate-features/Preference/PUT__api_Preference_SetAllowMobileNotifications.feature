@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetAllowMobileNotifications API (PUT)
+Feature: /api/Preference/SetAllowMobileNotifications (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetAllowMobileNotifications'
 
 Scenario: PUT /api/Preference/SetAllowMobileNotifications
-# START GENERATED PARAMS
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

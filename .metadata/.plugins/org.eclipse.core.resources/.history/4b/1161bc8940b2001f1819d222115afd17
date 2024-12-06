@@ -1,0 +1,20 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Transaction/AgentWithdrawal API (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/AgentWithdrawal'
+
+Scenario: POST /api/Transaction/AgentWithdrawal
+  * header x-api-version = '<value>'
+  * request {
+    "description": "string",
+    "reference": "string",
+    "amount": 0.0,
+    "accountId": 0,
+    "agentId": 0,
+    "feeRate": 0.0
+}
+  When method POST
+  Then status 200
+  # Add further validation here

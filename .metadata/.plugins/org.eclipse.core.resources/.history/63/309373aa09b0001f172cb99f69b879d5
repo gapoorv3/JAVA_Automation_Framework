@@ -1,0 +1,243 @@
+import java.io.*;
+import java.nio.file.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
+import io.swagger.v3.oas.models.*;
+import io.swagger.v3.oas.models.parameters.*;
+import io.swagger.v3.oas.models.media.*;
+import io.swagger.v3.parser.OpenAPIV3Parser;
+import io.swagger.v3.parser.core.models.SwaggerParseResult;
+
+public class KarateFeatureGenerator {
+
+    public static void main(String[] args) {
+        String swaggerUrl = "https://sprint.xprizo.com/swagger/v1/swagger.json";  // Your Swagger URL
+
+        try {
+            // Download Swagger spec
+            String swaggerJson = SwaggerDownloader.downloadSwaggerSpec(swaggerUrl);
+
+            // Check if the Swagger spec has changed
+            if (!SwaggerUtil.hasSwaggerSpecChanged(swaggerJson)) {
+                System.out.println("No changes detected in Swagger spec. Skipping feature file updates.");
+                return;  // Exit if no changes detected
+            }
+
+            // Parse the Swagger spec (OpenAPI)
+            SwaggerParseResult parseResult = new OpenAPIV3Parser().readLocation(swaggerUrl, null, null);
+            OpenAPI openAPI = parseResult.getOpenAPI();
+
+            if (openAPI == null) {
+                System.out.println("Failed to parse OpenAPI specification. Errors: " + parseResult.getMessages());
+                return;
+            }
+
+            // Generate Karate feature files based on the Swagger spec
+            generateKarateFeatureFiles(openAPI);
+
+        } catch (IOException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method to generate Karate feature files based on Swagger spec
+    private static void generateKarateFeatureFiles(OpenAPI openAPI) {
+        // Create base output directory
+        String baseOutputDir = "./generated-karate-features";
+        File baseDirectory = new File(baseOutputDir);
+        if (!baseDirectory.exists() && !baseDirectory.mkdir()) {
+            System.out.println("Failed to create base output directory: " + baseOutputDir);
+            return;
+        }
+
+        // Iterate through the paths (endpoints)
+        Paths paths = openAPI.getPaths();
+        for (Map.Entry<String, PathItem> entry : paths.entrySet()) {
+            String path = entry.getKey();
+            PathItem pathItem = entry.getValue();
+
+            // For each HTTP method (GET, POST, PUT, DELETE, PATCH)
+            if (pathItem.getGet() != null) {
+                generateFeatureFile(openAPI, path, "GET", pathItem.getGet(), baseOutputDir);
+            }
+            if (pathItem.getPost() != null) {
+                generateFeatureFile(openAPI, path, "POST", pathItem.getPost(), baseOutputDir);
+            }
+            if (pathItem.getPut() != null) {
+                generateFeatureFile(openAPI, path, "PUT", pathItem.getPut(), baseOutputDir);
+            }
+            if (pathItem.getDelete() != null) {
+                generateFeatureFile(openAPI, path, "DELETE", pathItem.getDelete(), baseOutputDir);
+            }
+            if (pathItem.getPatch() != null) {
+                generateFeatureFile(openAPI, path, "PATCH", pathItem.getPatch(), baseOutputDir);
+            }
+        }
+
+        System.out.println("Karate feature files have been generated in the directory: " + baseOutputDir);
+    }
+
+    // Method to generate individual Karate feature file for an endpoint and HTTP method
+    private static void generateFeatureFile(OpenAPI openAPI, String path, String method, Operation operation, String baseOutputDir) {
+        if (operation == null) {
+            System.out.println("Operation is null for path: " + path + " and method: " + method);
+            return;
+        }
+
+        // Extract tags to determine the module
+        List<String> tags = operation.getTags();
+        String moduleName = (tags != null && !tags.isEmpty()) ? tags.get(0) : "default_module";
+
+        // Create module directory
+        String moduleOutputDir = baseOutputDir + "/" + sanitizeFileName(moduleName);
+        File moduleDirectory = new File(moduleOutputDir);
+        if (!moduleDirectory.exists() && !moduleDirectory.mkdir()) {
+            System.out.println("Failed to create module directory: " + moduleOutputDir);
+            return;
+        }
+
+        // Generate a valid filename
+        String operationId = operation.getOperationId();
+        String fileName = operationId != null ? operationId : (method + "_" + path.replace("/", "_"));
+        fileName = sanitizeFileName(fileName);
+
+        // File path
+        String filePath = moduleOutputDir + "/" + fileName + ".feature";
+        File featureFile = new File(filePath);
+
+        StringBuilder featureContent = new StringBuilder();
+        String generatedComment = "# This file was automatically generated. Do not modify unless you know what you're doing.\n\n";
+        featureContent.append(generatedComment);
+
+        // Generate new content for the generated sections
+        String newParamsSection = generateParamsSection(openAPI, path, method, operation);
+        String newRequestBodySection = generateRequestBodySection(operation);
+
+        if (featureFile.exists()) {
+            // Load the existing content and preserve the manually edited parts
+            String existingContent = readFileContent(featureFile);
+
+            // Extract the existing params and request body from the file
+            String existingParamsSection = extractSection(existingContent, "# START GENERATED PARAMS", "# END GENERATED PARAMS");
+            String existingRequestBodySection = extractSection(existingContent, "# START GENERATED REQUEST BODY", "# END GENERATED REQUEST BODY");
+
+            // Compare the new generated sections with the existing sections
+            boolean paramsChanged = !newParamsSection.equals(existingParamsSection);
+            boolean requestBodyChanged = !newRequestBodySection.equals(existingRequestBodySection);
+
+            if (!paramsChanged && !requestBodyChanged) {
+                // No changes in generated sections, skip updating the file
+                System.out.println("No changes detected in the generated sections, skipping update for file: " + filePath);
+                return;
+            } else {
+                // Changes detected, preserve manually edited sections and update the generated sections
+                System.out.println("Changes detected in generated sections, updating the file: " + filePath);
+                featureContent = preserveManuallyEditedSections(existingContent, newParamsSection, newRequestBodySection);
+            }
+        } else {
+            // Create new file if it doesn't exist
+            featureContent = generateCompleteFeatureContent(openAPI, path, method, operation);
+        }
+
+        // Write updated content back to the file
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            fileWriter.write(featureContent.toString());
+            System.out.println("Feature file generated/updated: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method to preserve manually edited sections while updating the auto-generated ones
+    private static StringBuilder preserveManuallyEditedSections(String existingContent, String newParamsSection, String newRequestBodySection) {
+        StringBuilder updatedContent = new StringBuilder();
+
+        // Split the existing content into sections using markers
+        String[] sections = existingContent.split("# START GENERATED PARAMS|# END GENERATED PARAMS");
+
+        // First section (before generated parameters) is preserved
+        updatedContent.append(sections[0]);
+
+        // Add the new auto-generated section for parameters (overwrite)
+        updatedContent.append("# START GENERATED PARAMS\n");
+        updatedContent.append(newParamsSection);  // New parameter section
+        updatedContent.append("# END GENERATED PARAMS\n");
+
+        // Append the manually edited part after the generated params (from sections[2] if it exists)
+        if (sections.length > 2) {
+            updatedContent.append(sections[2]);
+        }
+
+        // Replace the request body section (if applicable)
+        updatedContent = replaceRequestBodySection(updatedContent.toString(), newRequestBodySection);
+
+        return new StringBuilder(updatedContent);
+    }
+
+    // Method to generate a complete feature content if no manual edits exist
+    private static StringBuilder generateCompleteFeatureContent(OpenAPI openAPI, String path, String method, Operation operation) {
+        StringBuilder featureContent = new StringBuilder();
+        featureContent.append("# This file was automatically generated. Do not modify unless you know what you're doing.\n\n");
+
+        // Generate the full feature file content (parameters, request body, etc.)
+        featureContent.append(generateParamsSection(openAPI, path, method, operation));
+        featureContent.append(generateRequestBodySection(operation));
+
+        // Append the standard Karate feature structure
+        featureContent.append("\nWhen method ").append(method).append("\n");
+        featureContent.append("Then status 200\n");
+
+        return featureContent;
+    }
+
+    // Method to extract a section between markers
+    private static String extractSection(String content, String startMarker, String endMarker) {
+        int startIndex = content.indexOf(startMarker);
+        int endIndex = content.indexOf(endMarker, startIndex);
+
+        if (startIndex != -1 && endIndex != -1) {
+            return content.substring(startIndex + startMarker.length(), endIndex).trim();
+        }
+        return "";
+    }
+
+    // Method to replace the request body section with the new generated one
+    private static StringBuilder replaceRequestBodySection(String content, String newRequestBodySection) {
+        return new StringBuilder(content.replaceAll(".*?# START GENERATED REQUEST BODY.*?# END GENERATED REQUEST BODY", newRequestBodySection));
+    }
+
+    // Utility to sanitize file name (avoid illegal characters)
+    private static String sanitizeFileName(String name) {
+        return name.replaceAll("[^a-zA-Z0-9-_]", "_");
+    }
+
+    // Method to generate parameters section from the Swagger spec
+    private static String generateParamsSection(OpenAPI openAPI, String path, String method, Operation operation) {
+        StringBuilder paramsSection = new StringBuilder();
+        for (Parameter param : operation.getParameters()) {
+            if (param.getIn() != null) {
+                String paramName = param.getName();
+                String paramIn = param.getIn();
+                String paramType = param.getSchema() != null ? param.getSchema().getType() : "string";
+                paramsSection.append("* header ").append(paramName).append(" = '<value>'\n");
+            }
+        }
+        return paramsSection.toString();
+    }
+
+    // Method to generate request body section from the Swagger spec
+    private static String generateRequestBodySection(Operation operation) {
+        StringBuilder requestBodySection = new StringBuilder();
+        if (operation.getRequestBody() != null) {
+            // Simplified request body generation (you can expand this based on your needs)
+            requestBodySection.append("* request {\n");
+            requestBodySection.append("  \"userName\": \"string\",\n");
+            requestBodySection.append("  \"password\": \"string\",\n");
+            requestBodySection.append("  \"otp\": \"string\"\n");
+            requestBodySection.append("}\n");
+        }
+        return requestBodySection.toString();
+    }
+
+}

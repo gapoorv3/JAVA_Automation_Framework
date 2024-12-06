@@ -1,0 +1,16 @@
+# Auto-generated feature file
+
+Feature: /api/Agent/StatementReport/{accountId} (GET)
+
+Background:
+  * url baseURL + '/api/Agent/StatementReport/{accountId}'
+
+Scenario: GET /api/Agent/StatementReport/{accountId}
+  * param accountId = '<value>'
+  * param fromDate = '<value>'
+  * param toDate = '<value>'
+  * param limit = '<value>'
+  * param format = '<value>'
+  * param x-api-version = '<value>'
+  When method GET
+  Then status 200

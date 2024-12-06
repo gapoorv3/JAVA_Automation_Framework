@@ -1,0 +1,19 @@
+# Auto-generated feature file
+
+Feature: /api/Merchant/CardTransactionList (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/CardTransactionList'
+
+Scenario: GET /api/Merchant/CardTransactionList
+  * param contactId = '<value>'
+  * param brand = '<value>'
+  * param search = '<value>'
+  * param status = '<value>'
+  * param fromDate = '<value>'
+  * param toDate = '<value>'
+  * param limit = '<value>'
+  * param offset = '<value>'
+  * param x-api-version = '<value>'
+  When method GET
+  Then status 200

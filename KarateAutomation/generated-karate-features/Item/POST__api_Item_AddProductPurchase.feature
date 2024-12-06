@@ -1,20 +1,22 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Item/AddProductPurchase API (POST)
+Feature: /api/Item/AddProductPurchase (POST)
 
 Background:
   * url baseURL + '/api/Item/AddProductPurchase'
 
 Scenario: POST /api/Item/AddProductPurchase
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "token": "string",
-    "reference": "string",
-    "email": "string",
-    "creditCard": "<value>"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "token": "string", // removed // removed // removed
+    "reference": "string", // removed // removed // removed
+    "email": "string", // removed // removed // removed
+    "creditCard": "<unknown_type>" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param reference = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param creditCard = '<value>' //added // removed // removed // removed
+  * param email = '<value>' //added // removed // removed // removed
+  * param token = '<value>' //added // removed // removed // removed

@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Wallet/InfoList API (GET)
+Feature: /api/Wallet/InfoList (GET)
 
 Background:
   * url baseURL + '/api/Wallet/InfoList'
 
 Scenario: GET /api/Wallet/InfoList
-# START GENERATED PARAMS
-  * param contact = '<value>'
-  * param includeAll = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contact = '<value>' //removed
+  * param includeAll = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param contact = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param includeAll = '<value>' //added

@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Relationship/GetModel API (GET)
+Feature: /api/Relationship/GetModel (GET)
 
 Background:
   * url baseURL + '/api/Relationship/GetModel'
 
 Scenario: GET /api/Relationship/GetModel
-# START GENERATED PARAMS
-  * param relatedContactId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param relatedContactId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param relatedContactId = '<value>' //added
+  * param x-api-version = '<value>' //added

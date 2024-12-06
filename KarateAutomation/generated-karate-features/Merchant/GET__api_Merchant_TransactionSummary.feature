@@ -1,19 +1,22 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/TransactionSummary API (GET)
+Feature: /api/Merchant/TransactionSummary (GET)
 
 Background:
   * url baseURL + '/api/Merchant/TransactionSummary'
 
 Scenario: GET /api/Merchant/TransactionSummary
-# START GENERATED PARAMS
-  * param contactId = '<value>'
-  * param fromDate = '<value>'
-  * param toDate = '<value>'
-  * param grain = '<value>'
-  * param currencyCode = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param fromDate = '<value>' //removed
+  * param toDate = '<value>' //removed
+  * param grain = '<value>' //removed
+  * param currencyCode = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param fromDate = '<value>' //added
+  * param contactId = '<value>' //added
+  * param toDate = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param grain = '<value>' //added
+  * param currencyCode = '<value>' //added

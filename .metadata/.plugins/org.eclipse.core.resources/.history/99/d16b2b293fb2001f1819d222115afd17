@@ -1,0 +1,16 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Security/ValidateCaptcha API (POST)
+
+Background:
+  * url baseURL + '/api/Security/ValidateCaptcha'
+
+Scenario: POST /api/Security/ValidateCaptcha
+# START GENERATED PARAMS
+  * param value = '<value>'
+  * param captcha = '<value>'
+  * header x-api-version = '<value>'
+# END GENERATED PARAMS
+  When method POST
+  Then status 200
+  # Add further validation here

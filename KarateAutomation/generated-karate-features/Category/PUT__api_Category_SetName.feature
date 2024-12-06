@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Category/SetName API (PUT)
+Feature: /api/Category/SetName (PUT)
 
 Background:
   * url baseURL + '/api/Category/SetName'
 
 Scenario: PUT /api/Category/SetName
-# START GENERATED PARAMS
-  * param hashId = '<value>'
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param hashId = '<value>' //removed
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param hashId = '<value>' //added
+  * param value = '<value>' //added

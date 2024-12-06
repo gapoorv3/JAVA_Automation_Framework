@@ -1,23 +1,28 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/CardTransactionList API (GET)
+Feature: /api/Merchant/CardTransactionList (GET)
 
 Background:
   * url baseURL + '/api/Merchant/CardTransactionList'
 
 Scenario: GET /api/Merchant/CardTransactionList
-# START GENERATED PARAMS
-  * param contactId = '<value>'
-  * param brand = '<value>'
-  * param includeActive = '<value>'
-  * param includePending = '<value>'
-  * param includeRejected = '<value>'
-  * param fromDate = '<value>'
-  * param toDate = '<value>'
-  * param limit = '<value>'
-  * param offset = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param brand = '<value>' //removed
+  * param search = '<value>' //removed
+  * param status = '<value>' //removed
+  * param fromDate = '<value>' //removed
+  * param toDate = '<value>' //removed
+  * param limit = '<value>' //removed
+  * param offset = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param fromDate = '<value>' //added
+  * param search = '<value>' //added
+  * param offset = '<value>' //added
+  * param contactId = '<value>' //added
+  * param toDate = '<value>' //added
+  * param limit = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param brand = '<value>' //added
+  * param status = '<value>' //added

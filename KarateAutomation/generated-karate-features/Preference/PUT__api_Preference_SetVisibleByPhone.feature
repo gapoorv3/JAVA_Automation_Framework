@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetVisibleByPhone API (PUT)
+Feature: /api/Preference/SetVisibleByPhone (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetVisibleByPhone'
 
 Scenario: PUT /api/Preference/SetVisibleByPhone
-# START GENERATED PARAMS
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

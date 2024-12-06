@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/ChangePassword API (PUT)
+Feature: /api/Profile/ChangePassword (PUT)
 
 Background:
   * url baseURL + '/api/Profile/ChangePassword'
 
 Scenario: PUT /api/Profile/ChangePassword
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "key": "string",
-    "value": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "key": "string", // removed // removed // removed
+    "value": "string" // removed // removed // removed
 }
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added // removed // removed // removed
+  * param key = '<value>' //added // removed // removed // removed

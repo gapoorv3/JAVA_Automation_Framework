@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Wallet/SetDefault/{accountId} API (PUT)
+Feature: /api/Wallet/SetDefault/{accountId} (PUT)
 
 Background:
   * url baseURL + '/api/Wallet/SetDefault/{accountId}'
 
 Scenario: PUT /api/Wallet/SetDefault/{accountId}
-# START GENERATED PARAMS
-  * path 'accountId' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param accountId = '<value>' //added
+  * param x-api-version = '<value>' //added

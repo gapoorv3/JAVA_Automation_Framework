@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/List/{id} API (GET)
+Feature: /api/Task/List/{id} (GET)
 
 Background:
   * url baseURL + '/api/Task/List/{id}'
 
 Scenario: GET /api/Task/List/{id}
-# START GENERATED PARAMS
-  * path 'id' = '<value>'
-  * param filter = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param filter = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param filter = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

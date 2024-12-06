@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetDefaultCurrencyCode/{id} API (PUT)
+Feature: /api/Preference/SetDefaultCurrencyCode/{id} (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetDefaultCurrencyCode/{id}'
 
 Scenario: PUT /api/Preference/SetDefaultCurrencyCode/{id}
-# START GENERATED PARAMS
-  * param value = '<value>'
-  * path 'id' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param value = '<value>' //removed
+  * param id = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added
+  * param value = '<value>' //added

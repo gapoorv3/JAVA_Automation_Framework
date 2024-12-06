@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/Delete/{contactId} API (DELETE)
+Feature: /api/Addressbook/Delete/{contactId} (DELETE)
 
 Background:
   * url baseURL + '/api/Addressbook/Delete/{contactId}'
 
 Scenario: DELETE /api/Addressbook/Delete/{contactId}
-# START GENERATED PARAMS
-  * path 'contactId' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method DELETE
   Then status 200
-  # Add further validation here
+  * param contactId = '<value>' //added
+  * param x-api-version = '<value>' //added

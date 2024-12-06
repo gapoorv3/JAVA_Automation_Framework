@@ -1,17 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/Add API (POST)
+Feature: /api/Addressbook/Add (POST)
 
 Background:
   * url baseURL + '/api/Addressbook/Add'
 
 Scenario: POST /api/Addressbook/Add
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "value": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "value": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added // removed // removed // removed

@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Category/SetPdfAttachment API (POST)
+Feature: /api/Category/SetPdfAttachment (POST)
 
 Background:
   * url baseURL + '/api/Category/SetPdfAttachment'
 
 Scenario: POST /api/Category/SetPdfAttachment
-# START GENERATED PARAMS
-  * param hashId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "file": "string"
+  * param hashId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "file": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param file = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param hashId = '<value>' //added

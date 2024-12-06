@@ -1,0 +1,17 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/SavingsWithdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/SavingsWithdrawal'
+
+Scenario: POST /api/Transaction/SavingsWithdrawal
+  * header x-api-version = '<value>'
+  * request {
+    "description": "string",
+    "reference": "string",
+    "amount": 0.0,
+    "accountId": 0
+}
+  When method POST
+  Then status 200

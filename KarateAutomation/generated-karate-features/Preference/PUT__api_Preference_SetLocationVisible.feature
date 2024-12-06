@@ -1,15 +1,13 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
-
-Feature: /api/Preference/SetLocationVisible API (PUT)
-
-Background:
-  * url baseURL + '/api/Preference/SetLocationVisible'
-
-Scenario: PUT /api/Preference/SetLocationVisible
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request true
-  When method PUT
-  Then status 200
-  # Add further validation here
+# Auto-generated feature file // removed // removed // removed
+ // removed // removed // removed
+Feature: /api/Preference/SetLocationVisible (PUT) // removed // removed // removed
+ // removed // removed // removed
+Background: // removed // removed // removed
+  * url baseURL + '/api/Preference/SetLocationVisible' // removed // removed // removed
+ // removed // removed // removed
+Scenario: PUT /api/Preference/SetLocationVisible // removed // removed // removed
+  * param x-api-version = '<value>' //removed
+  * request {} //removed // removed // removed // removed // removed
+  When method PUT // removed // removed // removed
+  Then status 200 // removed // removed // removed
+  * param x-api-version = '<value>' //added

@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Agent/DeleteSubAgent API (DELETE)
+Feature: /api/Agent/DeleteSubAgent (DELETE)
 
 Background:
   * url baseURL + '/api/Agent/DeleteSubAgent'
 
 Scenario: DELETE /api/Agent/DeleteSubAgent
-# START GENERATED PARAMS
-  * param subAgentId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param subAgentId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method DELETE
   Then status 200
-  # Add further validation here
+  * param subAgentId = '<value>' //added
+  * param x-api-version = '<value>' //added

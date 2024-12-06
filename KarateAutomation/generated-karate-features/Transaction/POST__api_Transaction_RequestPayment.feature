@@ -1,22 +1,26 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/RequestPayment API (POST)
+Feature: /api/Transaction/RequestPayment (POST)
 
 Background:
   * url baseURL + '/api/Transaction/RequestPayment'
 
 Scenario: POST /api/Transaction/RequestPayment
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "description": "string",
-    "reference": "string",
-    "amount": "<value>",
-    "currencyCode": "string",
-    "fromAccountId": 0,
-    "toAccountId": 0
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "description": "string", // removed // removed // removed
+    "reference": "string", // removed // removed // removed
+    "amount": 0.0, // removed // removed // removed
+    "currencyCode": "string", // removed // removed // removed
+    "fromAccountId": 0, // removed // removed // removed
+    "toAccountId": 0 // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param reference = '<value>' //added // removed // removed // removed
+  * param amount = '<value>' //added // removed // removed // removed
+  * param fromAccountId = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param description = '<value>' //added // removed // removed // removed
+  * param toAccountId = '<value>' //added // removed // removed // removed
+  * param currencyCode = '<value>' //added // removed // removed // removed

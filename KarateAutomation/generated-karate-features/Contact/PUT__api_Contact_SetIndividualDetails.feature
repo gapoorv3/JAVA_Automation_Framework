@@ -1,24 +1,30 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Contact/SetIndividualDetails API (PUT)
+Feature: /api/Contact/SetIndividualDetails (PUT)
 
 Background:
   * url baseURL + '/api/Contact/SetIndividualDetails'
 
 Scenario: PUT /api/Contact/SetIndividualDetails
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "title": "string",
-    "firstName": "string",
-    "middleName": "string",
-    "lastName": "string",
-    "suffix": "string",
-    "gender": "string",
-    "birthDate": "string",
-    "identityNumber": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "title": "string", // removed // removed // removed
+    "firstName": "string", // removed // removed // removed
+    "middleName": "string", // removed // removed // removed
+    "lastName": "string", // removed // removed // removed
+    "suffix": "string", // removed // removed // removed
+    "gender": "string", // removed // removed // removed
+    "birthDate": "string", // removed // removed // removed
+    "identityNumber": "string" // removed // removed // removed
 }
   When method PUT
   Then status 200
-  # Add further validation here
+  * param firstName = '<value>' //added // removed // removed // removed
+  * param lastName = '<value>' //added // removed // removed // removed
+  * param gender = '<value>' //added // removed // removed // removed
+  * param identityNumber = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param middleName = '<value>' //added // removed // removed // removed
+  * param title = '<value>' //added // removed // removed // removed
+  * param suffix = '<value>' //added // removed // removed // removed
+  * param birthDate = '<value>' //added // removed // removed // removed

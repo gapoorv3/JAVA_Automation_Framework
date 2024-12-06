@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/DailyWithdrawalLimitRequest/{accountId} API (GET)
+Feature: /api/Task/DailyWithdrawalLimitRequest/{accountId} (GET)
 
 Background:
   * url baseURL + '/api/Task/DailyWithdrawalLimitRequest/{accountId}'
 
 Scenario: GET /api/Task/DailyWithdrawalLimitRequest/{accountId}
-# START GENERATED PARAMS
-  * path 'accountId' = '<value>'
-  * param limit = '<value>'
-  * param description = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param limit = '<value>' //removed
+  * param description = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param accountId = '<value>' //added
+  * param limit = '<value>' //added
+  * param description = '<value>' //added
+  * param x-api-version = '<value>' //added

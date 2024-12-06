@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Contact/SetMobile (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/SetMobile'
+
+Scenario: PUT /api/Contact/SetMobile
+  * param x-api-version = '<value>'
+  * request {}
+  When method PUT
+  Then status 200

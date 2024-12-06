@@ -1,0 +1,13 @@
+# Auto-generated feature file
+
+Feature: /api/Merchant/RequestPaymentRedirect (POST)
+
+Background:
+  * url baseURL + '/api/Merchant/RequestPaymentRedirect'
+
+Scenario: POST /api/Merchant/RequestPaymentRedirect
+  * param returnUrl = '<value>'
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

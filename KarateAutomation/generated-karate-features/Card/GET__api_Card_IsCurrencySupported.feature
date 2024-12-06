@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/IsCurrencySupported API (GET)
+Feature: /api/Card/IsCurrencySupported (GET)
 
 Background:
   * url baseURL + '/api/Card/IsCurrencySupported'
 
 Scenario: GET /api/Card/IsCurrencySupported
-# START GENERATED PARAMS
-  * param currencyCode = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param currencyCode = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param currencyCode = '<value>' //added

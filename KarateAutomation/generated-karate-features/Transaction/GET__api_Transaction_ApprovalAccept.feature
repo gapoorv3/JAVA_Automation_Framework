@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/ApprovalAccept API (GET)
+Feature: /api/Transaction/ApprovalAccept (GET)
 
 Background:
   * url baseURL + '/api/Transaction/ApprovalAccept'
 
 Scenario: GET /api/Transaction/ApprovalAccept
-# START GENERATED PARAMS
-  * param key = '<value>'
-  * param pin = '<value>'
-  * param once = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param key = '<value>' //removed
+  * param pin = '<value>' //removed
+  * param once = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param pin = '<value>' //added
+  * param once = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param key = '<value>' //added

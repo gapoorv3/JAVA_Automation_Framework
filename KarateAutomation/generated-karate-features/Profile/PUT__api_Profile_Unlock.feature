@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/Unlock API (PUT)
+Feature: /api/Profile/Unlock (PUT)
 
 Background:
   * url baseURL + '/api/Profile/Unlock'
 
 Scenario: PUT /api/Profile/Unlock
-# START GENERATED PARAMS
-  * param otpType = '<value>'
-  * param otp = '<value>'
-  * param ttl = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param otpType = '<value>' //removed
+  * param otp = '<value>' //removed
+  * param ttl = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param otp = '<value>' //added
+  * param otpType = '<value>' //added
+  * param ttl = '<value>' //added

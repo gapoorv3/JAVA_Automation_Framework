@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/CreateApiKey API (POST)
+Feature: /api/Profile/CreateApiKey (POST)
 
 Background:
   * url baseURL + '/api/Profile/CreateApiKey'
 
 Scenario: POST /api/Profile/CreateApiKey
-# START GENERATED PARAMS
-  * param name = '<value>'
-  * param description = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param name = '<value>' //removed
+  * param description = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param name = '<value>' //added
+  * param description = '<value>' //added
+  * param x-api-version = '<value>' //added

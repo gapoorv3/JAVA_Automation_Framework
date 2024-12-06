@@ -1,0 +1,14 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Wallet/TransactionByReference/{accountId} API (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/TransactionByReference/{accountId}'
+
+Scenario: GET /api/Wallet/TransactionByReference/{accountId}
+  * path 'accountId' = '<value>'
+  * param reference = '<value>'
+  * header x-api-version = '<value>'
+  When method GET
+  Then status 200
+  # Add further validation here

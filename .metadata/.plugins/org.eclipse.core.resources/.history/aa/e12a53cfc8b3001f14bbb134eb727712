@@ -1,0 +1,13 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/CardWidthdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/CardWidthdrawal'
+
+Scenario: POST /api/Transaction/CardWidthdrawal
+  * param useApprovalProcess = '<value>'
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

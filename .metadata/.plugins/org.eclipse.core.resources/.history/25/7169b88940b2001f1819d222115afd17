@@ -1,0 +1,13 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/System/Banks API (GET)
+
+Background:
+  * url baseURL + '/api/System/Banks'
+
+Scenario: GET /api/System/Banks
+  * param currencyCode = '<value>'
+  * header x-api-version = '<value>'
+  When method GET
+  Then status 200
+  # Add further validation here

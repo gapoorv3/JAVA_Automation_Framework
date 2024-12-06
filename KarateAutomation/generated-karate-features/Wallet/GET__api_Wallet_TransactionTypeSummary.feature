@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Wallet/TransactionTypeSummary API (GET)
+Feature: /api/Wallet/TransactionTypeSummary (GET)
 
 Background:
   * url baseURL + '/api/Wallet/TransactionTypeSummary'
 
 Scenario: GET /api/Wallet/TransactionTypeSummary
-# START GENERATED PARAMS
-  * param accountId = '<value>'
-  * param fromDate = '<value>'
-  * param toDate = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param fromDate = '<value>' //removed
+  * param toDate = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param fromDate = '<value>' //added
+  * param accountId = '<value>' //added
+  * param toDate = '<value>' //added
+  * param x-api-version = '<value>' //added

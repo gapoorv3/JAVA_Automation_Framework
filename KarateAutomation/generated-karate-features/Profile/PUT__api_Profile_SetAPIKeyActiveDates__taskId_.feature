@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/SetAPIKeyActiveDates/{taskId} API (PUT)
+Feature: /api/Profile/SetAPIKeyActiveDates/{taskId} (PUT)
 
 Background:
   * url baseURL + '/api/Profile/SetAPIKeyActiveDates/{taskId}'
 
 Scenario: PUT /api/Profile/SetAPIKeyActiveDates/{taskId}
-# START GENERATED PARAMS
-  * path 'taskId' = '<value>'
-  * param startDate = '<value>'
-  * param endDate = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param taskId = '<value>' //removed
+  * param startDate = '<value>' //removed
+  * param endDate = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param endDate = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param taskId = '<value>' //added
+  * param startDate = '<value>' //added

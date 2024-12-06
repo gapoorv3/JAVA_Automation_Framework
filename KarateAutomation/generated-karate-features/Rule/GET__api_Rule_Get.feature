@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Rule/Get API (GET)
+Feature: /api/Rule/Get (GET)
 
 Background:
   * url baseURL + '/api/Rule/Get'
 
 Scenario: GET /api/Rule/Get
-# START GENERATED PARAMS
-  * param hashId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param hashId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param hashId = '<value>' //added

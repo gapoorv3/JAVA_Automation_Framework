@@ -1,0 +1,13 @@
+# Auto-generated feature file
+
+Feature: /api/Task/AddComment/{id} (POST)
+
+Background:
+  * url baseURL + '/api/Task/AddComment/{id}'
+
+Scenario: POST /api/Task/AddComment/{id}
+  * path 'id' = '<value>'
+  * param comment = '<value>'
+  * header x-api-version = '<value>'
+  When method POST
+  Then status 200

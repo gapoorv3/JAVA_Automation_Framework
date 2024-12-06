@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/SetPin API (PUT)
+Feature: /api/Profile/SetPin (PUT)
 
 Background:
   * url baseURL + '/api/Profile/SetPin'
 
 Scenario: PUT /api/Profile/SetPin
-# START GENERATED PARAMS
-  * param pin = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param pin = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param pin = '<value>' //added
+  * param x-api-version = '<value>' //added

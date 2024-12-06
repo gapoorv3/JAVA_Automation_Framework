@@ -1,0 +1,20 @@
+# Auto-generated feature file
+
+Feature: /api/Report/Save (PUT)
+
+Background:
+  * url baseURL + '/api/Report/Save'
+
+Scenario: PUT /api/Report/Save
+  * header x-api-version = '<value>'
+  * request {
+    "type": "string",
+    "description": "string",
+    "heading": "<unknown_type>",
+    "columns": "<value>",
+    "isLandscape": true,
+    "isFitToPage": true,
+    "isDefault": true
+}
+  When method PUT
+  Then status 200

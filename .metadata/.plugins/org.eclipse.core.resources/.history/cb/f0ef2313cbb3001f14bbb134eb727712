@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Profile/ValidateAuthenticatorCode (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/ValidateAuthenticatorCode'
+
+Scenario: PUT /api/Profile/ValidateAuthenticatorCode
+  * header x-api-version = '<value>'
+  * request {
+    "value": "string"
+}
+  When method PUT
+  Then status 200

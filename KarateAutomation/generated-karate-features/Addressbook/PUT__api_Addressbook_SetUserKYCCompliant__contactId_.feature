@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/SetUserKYCCompliant/{contactId} API (PUT)
+Feature: /api/Addressbook/SetUserKYCCompliant/{contactId} (PUT)
 
 Background:
   * url baseURL + '/api/Addressbook/SetUserKYCCompliant/{contactId}'
 
 Scenario: PUT /api/Addressbook/SetUserKYCCompliant/{contactId}
-# START GENERATED PARAMS
-  * path 'contactId' = '<value>'
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param contactId = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

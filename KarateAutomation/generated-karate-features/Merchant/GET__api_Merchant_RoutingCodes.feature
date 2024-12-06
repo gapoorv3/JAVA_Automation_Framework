@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/RoutingCodes API (GET)
+Feature: /api/Merchant/RoutingCodes (GET)
 
 Background:
   * url baseURL + '/api/Merchant/RoutingCodes'
 
 Scenario: GET /api/Merchant/RoutingCodes
-# START GENERATED PARAMS
-  * param contactId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param contactId = '<value>' //added
+  * param x-api-version = '<value>' //added

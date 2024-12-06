@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Item/GetProductQRCode API (GET)
+Feature: /api/Item/GetProductQRCode (GET)
 
 Background:
   * url baseURL + '/api/Item/GetProductQRCode'
 
 Scenario: GET /api/Item/GetProductQRCode
-# START GENERATED PARAMS
-  * param id = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

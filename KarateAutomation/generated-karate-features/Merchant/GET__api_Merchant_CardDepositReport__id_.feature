@@ -1,19 +1,22 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/CardDepositReport/{id} API (GET)
+Feature: /api/Merchant/CardDepositReport/{id} (GET)
 
 Background:
   * url baseURL + '/api/Merchant/CardDepositReport/{id}'
 
 Scenario: GET /api/Merchant/CardDepositReport/{id}
-# START GENERATED PARAMS
-  * path 'id' = '<value>'
-  * param fromDate = '<value>'
-  * param toDate = '<value>'
-  * param limit = '<value>'
-  * param format = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param fromDate = '<value>' //removed
+  * param toDate = '<value>' //removed
+  * param limit = '<value>' //removed
+  * param format = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param fromDate = '<value>' //added
+  * param toDate = '<value>' //added
+  * param limit = '<value>' //added
+  * param format = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

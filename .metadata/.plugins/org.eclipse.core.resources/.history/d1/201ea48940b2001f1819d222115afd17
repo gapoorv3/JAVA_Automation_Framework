@@ -1,0 +1,14 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Item/SetProductDescription API (PUT)
+
+Background:
+  * url baseURL + '/api/Item/SetProductDescription'
+
+Scenario: PUT /api/Item/SetProductDescription
+  * param id = '<value>'
+  * param value = '<value>'
+  * header x-api-version = '<value>'
+  When method PUT
+  Then status 200
+  # Add further validation here

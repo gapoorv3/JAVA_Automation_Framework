@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/ProcessPaymentRedirect API (POST)
+Feature: /api/Card/ProcessPaymentRedirect (POST)
 
 Background:
   * url baseURL + '/api/Card/ProcessPaymentRedirect'
 
 Scenario: POST /api/Card/ProcessPaymentRedirect
-# START GENERATED PARAMS
-  * param key = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "encData": "string"
+  * param key = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "encData": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param encData = '<value>' //added // removed // removed // removed
+  * param key = '<value>' //added

@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Merchant/SetRoutingCodeInactive API (PUT)
+Feature: /api/Merchant/SetRoutingCodeInactive (PUT)
 
 Background:
   * url baseURL + '/api/Merchant/SetRoutingCodeInactive'
 
 Scenario: PUT /api/Merchant/SetRoutingCodeInactive
-# START GENERATED PARAMS
-  * param code = '<value>'
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param code = '<value>' //removed
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param code = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

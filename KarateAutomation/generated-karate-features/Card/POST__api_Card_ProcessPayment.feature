@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/ProcessPayment API (POST)
+Feature: /api/Card/ProcessPayment (POST)
 
 Background:
   * url baseURL + '/api/Card/ProcessPayment'
 
 Scenario: POST /api/Card/ProcessPayment
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "key": "string",
-    "value": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "key": "string", // removed // removed // removed
+    "value": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added // removed // removed // removed
+  * param key = '<value>' //added // removed // removed // removed

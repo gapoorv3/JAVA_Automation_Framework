@@ -1,22 +1,26 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/GetFees API (POST)
+Feature: /api/Transaction/GetFees (POST)
 
 Background:
   * url baseURL + '/api/Transaction/GetFees'
 
 Scenario: POST /api/Transaction/GetFees
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "type": "string",
-    "fromAccountId": 0,
-    "toAccountId": 0,
-    "currencyCode": "string",
-    "amount": "<value>",
-    "refCode": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "type": "string", // removed // removed // removed
+    "fromAccountId": 0, // removed // removed // removed
+    "toAccountId": 0, // removed // removed // removed
+    "currencyCode": "string", // removed // removed // removed
+    "amount": 0.0, // removed // removed // removed
+    "refCode": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param amount = '<value>' //added // removed // removed // removed
+  * param fromAccountId = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param toAccountId = '<value>' //added // removed // removed // removed
+  * param type = '<value>' //added // removed // removed // removed
+  * param currencyCode = '<value>' //added // removed // removed // removed
+  * param refCode = '<value>' //added // removed // removed // removed

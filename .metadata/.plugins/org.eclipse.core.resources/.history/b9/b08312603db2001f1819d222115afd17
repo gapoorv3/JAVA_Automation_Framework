@@ -1,0 +1,265 @@
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.PathItem;
+import io.swagger.v3.oas.models.Paths;
+import io.swagger.v3.oas.models.Operation;
+import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.media.*;
+import io.swagger.v3.parser.OpenAPIV3Parser;
+import io.swagger.v3.parser.core.models.SwaggerParseResult;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+
+public class KarateFeatureGenerator {
+
+    public static void main(String[] args) {
+        String swaggerUrl = "https://sprint.xprizo.com/swagger/v1/swagger.json"; // Replace with your OpenAPI URL
+
+        // Parse the OpenAPI specification
+        SwaggerParseResult parseResult = new OpenAPIV3Parser().readLocation(swaggerUrl, null, null);
+        OpenAPI openAPI = parseResult.getOpenAPI();
+
+        if (openAPI == null) {
+            System.out.println("Failed to parse OpenAPI specification. Errors: " + parseResult.getMessages());
+            return;
+        }
+
+        // Create base output directory
+        String baseOutputDir = "./generated-karate-features";
+        File baseDirectory = new File(baseOutputDir);
+        if (!baseDirectory.exists() && !baseDirectory.mkdir()) {
+            System.out.println("Failed to create base output directory: " + baseOutputDir);
+            return;
+        }
+
+        // Iterate through the paths (endpoints)
+        Paths paths = openAPI.getPaths();
+        for (Map.Entry<String, PathItem> entry : paths.entrySet()) {
+            String path = entry.getKey();
+            PathItem pathItem = entry.getValue();
+
+            // For each HTTP method (GET, POST, PUT, DELETE, PATCH)
+            if (pathItem.getGet() != null) {
+                generateFeatureFile(openAPI, path, "GET", pathItem.getGet(), baseOutputDir);
+            }
+            if (pathItem.getPost() != null) {
+                generateFeatureFile(openAPI, path, "POST", pathItem.getPost(), baseOutputDir);
+            }
+            if (pathItem.getPut() != null) {
+                generateFeatureFile(openAPI, path, "PUT", pathItem.getPut(), baseOutputDir);
+            }
+            if (pathItem.getDelete() != null) {
+                generateFeatureFile(openAPI, path, "DELETE", pathItem.getDelete(), baseOutputDir);
+            }
+            if (pathItem.getPatch() != null) {
+                generateFeatureFile(openAPI, path, "PATCH", pathItem.getPatch(), baseOutputDir);
+            }
+        }
+
+        System.out.println("Karate feature files have been generated in the directory: " + baseOutputDir);
+    }
+
+    private static void generateFeatureFile(OpenAPI openAPI, String path, String method, Operation operation, String baseOutputDir) {
+        if (operation == null) {
+            System.out.println("Operation is null for path: " + path + " and method: " + method);
+            return;
+        }
+
+        // Extract tags to determine the module
+        List<String> tags = operation.getTags();
+        String moduleName = (tags != null && !tags.isEmpty()) ? tags.get(0) : "default_module";
+
+        // Create module directory
+        String moduleOutputDir = baseOutputDir + "/" + sanitizeFileName(moduleName);
+        File moduleDirectory = new File(moduleOutputDir);
+        if (!moduleDirectory.exists() && !moduleDirectory.mkdir()) {
+            System.out.println("Failed to create module directory: " + moduleOutputDir);
+            return;
+        }
+
+        // Generate a valid filename
+        String operationId = operation.getOperationId();
+        String fileName = operationId != null ? operationId : (method + "_" + path.replace("/", "_"));
+        fileName = sanitizeFileName(fileName) + "_Not_Implemented"; // Add "_Not_Implemented" by default
+
+        // Check if an "_Implemented" file already exists
+        File[] existingFiles = moduleDirectory.listFiles();
+        if (existingFiles != null) {
+            for (File existingFile : existingFiles) {
+                if (existingFile.getName().contains(fileName.replace("_Not_Implemented", "_Implemented"))) {
+                    System.out.println("Skipping file as it is manually marked as Implemented: " + existingFile.getName());
+                    return; // Skip generating file
+                }
+            }
+        }
+
+        // File path
+        String filePath = moduleOutputDir + "/" + fileName + ".feature";
+        File featureFile = new File(filePath);
+
+        // Generate content for the feature file
+        StringBuilder featureContent = generateCompleteFeatureContent(openAPI, path, method, operation);
+
+        // Write to the file
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            fileWriter.write(featureContent.toString());
+            System.out.println("Feature file generated: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static StringBuilder generateCompleteFeatureContent(OpenAPI openAPI, String path, String method, Operation operation) {
+        StringBuilder featureContent = new StringBuilder();
+        String generatedComment = "# This file was automatically generated. Do not modify unless you know what you're doing.\n\n";
+        featureContent.append(generatedComment);
+
+        // Add Background section with URL
+        featureContent.append("Feature: ").append(path).append(" API (").append(method).append(")\n\n");
+        featureContent.append("Background:\n");
+        featureContent.append("  * url baseURL + '").append(path).append("'\n\n");
+
+        // Start scenario
+        featureContent.append("Scenario: ").append(method).append(" ").append(path).append("\n");
+
+        // Add generated params section
+        featureContent.append("# START GENERATED PARAMS\n");
+        featureContent.append(generateParamsSection(openAPI, path, method, operation)); // Generate params section
+        featureContent.append("# END GENERATED PARAMS\n");
+
+        // Handle request body for methods like POST, PUT, PATCH
+        featureContent.append(generateRequestBodySection(openAPI, operation));
+
+        // Add HTTP method and expected status
+        featureContent.append("  When method ").append(method).append("\n");
+        featureContent.append("  Then status 200\n");
+        featureContent.append("  # Add further validation here\n");
+
+        return featureContent;
+    }
+
+    private static String generateParamsSection(OpenAPI openAPI, String path, String method, Operation operation) {
+        StringBuilder paramsSection = new StringBuilder();
+        if (operation.getParameters() != null) {
+            for (Parameter param : operation.getParameters()) {
+                String paramPlaceholder = "<value>";
+                switch (param.getIn()) {
+                    case "query":
+                        paramsSection.append("  * param ").append(param.getName()).append(" = '").append(paramPlaceholder).append("'\n");
+                        break;
+                    case "path":
+                        paramsSection.append("  * path '").append(param.getName()).append("' = '").append(paramPlaceholder).append("'\n");
+                        break;
+                    case "header":
+                        paramsSection.append("  * header ").append(param.getName()).append(" = '").append(paramPlaceholder).append("'\n");
+                        break;
+                    case "cookie":
+                        paramsSection.append("  * cookie ").append(param.getName()).append(" = '").append(paramPlaceholder).append("'\n");
+                        break;
+                }
+            }
+        }
+        return paramsSection.toString();
+    }
+
+    private static String generateRequestBodySection(OpenAPI openAPI, Operation operation) {
+        StringBuilder requestBodySection = new StringBuilder();
+        if (operation.getRequestBody() != null && operation.getRequestBody().getContent() != null) {
+            Content content = operation.getRequestBody().getContent();
+            for (Map.Entry<String, MediaType> entry : content.entrySet()) {
+                MediaType media = entry.getValue();
+                if (media.getSchema() != null) {
+                    String resolvedSchema = resolveSchema(openAPI, media.getSchema(), new HashSet<>());
+                    requestBodySection.append("  * request ").append(resolvedSchema).append("\n");
+                    break;
+                }
+            }
+        }
+        return requestBodySection.toString();
+    }
+
+    private static String resolveSchema(OpenAPI openAPI, Schema<?> schema, Set<String> visitedSchemas) {
+        if (schema.get$ref() != null) {
+            String ref = schema.get$ref();
+            String[] refParts = ref.split("/");
+            String schemaName = refParts[refParts.length - 1];
+            Schema<?> referencedSchema = openAPI.getComponents().getSchemas().get(schemaName);
+            return resolveSchema(openAPI, referencedSchema, visitedSchemas);
+        }
+        return generateRequestBodySchema(schema, visitedSchemas);
+    }
+
+    private static String generateRequestBodySchema(Schema<?> schema, Set<String> visitedSchemas) {
+        if (schema == null) {
+            return "{}";
+        }
+
+        StringBuilder requestBody = new StringBuilder();
+
+        if ("object".equals(schema.getType()) && schema.getProperties() != null) {
+            requestBody.append("{\n");
+            Map<String, Schema> properties = schema.getProperties();
+            for (Map.Entry<String, Schema> property : properties.entrySet()) {
+                String key = property.getKey();
+                Schema<?> propertySchema = property.getValue();
+
+                requestBody.append("    \"").append(key).append("\": ");
+
+                if ("array".equals(propertySchema.getType())) {
+                    requestBody.append("[\n");
+                    if (propertySchema instanceof ArraySchema) {
+                        requestBody.append("        ").append(generateRequestBodySchema(((ArraySchema) propertySchema).getItems(), visitedSchemas));
+                    }
+                    requestBody.append("\n    ]");
+                } else if ("object".equals(propertySchema.getType())) {
+                    if (!visitedSchemas.contains(propertySchema.getName())) {
+                        visitedSchemas.add(propertySchema.getName());
+                        requestBody.append(generateRequestBodySchema(propertySchema, visitedSchemas));
+                    } else {
+                        requestBody.append("{}");
+                    }
+                } else {
+                    requestBody.append(getPlaceholderForType(propertySchema.getType()));
+                }
+
+                requestBody.append(",\n");
+            }
+
+            if (requestBody.length() > 2) {
+                requestBody.setLength(requestBody.length() - 2);
+            }
+            requestBody.append("\n}");
+        } else if ("array".equals(schema.getType())) {
+            requestBody.append("[");
+            if (((ArraySchema) schema).getItems() != null) {
+                requestBody.append(generateRequestBodySchema(((ArraySchema) schema).getItems(), visitedSchemas));
+            }
+            requestBody.append("]");
+        } else {
+            requestBody.append(getPlaceholderForType(schema.getType()));
+        }
+
+        return requestBody.toString();
+    }
+
+    private static String getPlaceholderForType(String type) {
+        switch (type) {
+            case "string":
+                return "\"string\"";
+            case "integer":
+                return "0";
+            case "boolean":
+                return "true";
+            case "number":
+                return "0.0";
+            default:
+                return "\"<value>\"";
+        }
+    }
+
+    private static String sanitizeFileName(String input) {
+        return input.replaceAll("[^a-zA-Z0-9_\\-]", "_").replaceAll("\\s+", "_");
+    }
+}

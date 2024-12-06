@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/RequestPayment API (POST)
+Feature: /api/Card/RequestPayment (POST)
 
 Background:
   * url baseURL + '/api/Card/RequestPayment'
 
 Scenario: POST /api/Card/RequestPayment
-# START GENERATED PARAMS
-  * param contactId = '<value>'
-  * param encData = '<value>'
-  * param redirect = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param encData = '<value>' //removed
+  * param redirect = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param redirect = '<value>' //added
+  * param contactId = '<value>' //added
+  * param encData = '<value>' //added
+  * param x-api-version = '<value>' //added

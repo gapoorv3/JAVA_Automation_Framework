@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/Cancel/{id} API (PUT)
+Feature: /api/Task/Cancel/{id} (PUT)
 
 Background:
   * url baseURL + '/api/Task/Cancel/{id}'
 
 Scenario: PUT /api/Task/Cancel/{id}
-# START GENERATED PARAMS
-  * path 'id' = '<value>'
-  * param reason = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param reason = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param reason = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

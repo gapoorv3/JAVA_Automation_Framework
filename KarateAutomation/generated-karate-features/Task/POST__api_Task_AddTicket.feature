@@ -1,21 +1,20 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/AddTicket API (POST)
+Feature: /api/Task/AddTicket (POST)
 
 Background:
   * url baseURL + '/api/Task/AddTicket'
 
 Scenario: POST /api/Task/AddTicket
-# START GENERATED PARAMS
-  * param description = '<value>'
-  * param memo = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "files": [
-        "string"
-    ]
+  * param description = '<value>' //removed
+  * param memo = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "files": "<value>" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param description = '<value>' //added
+  * param memo = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param files = '<value>' //added // removed // removed // removed

@@ -1,0 +1,17 @@
+# Auto-generated feature file
+
+Feature: /api/Merchant/AddProductPurchase (POST)
+
+Background:
+  * url baseURL + '/api/Merchant/AddProductPurchase'
+
+Scenario: POST /api/Merchant/AddProductPurchase
+  * header x-api-version = '<value>'
+  * request {
+    "token": "string",
+    "reference": "string",
+    "email": "string",
+    "creditCard": "<unknown_type>"
+}
+  When method POST
+  Then status 200

@@ -1,16 +1,15 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
-
-Feature: /api/Security/FirebaseLogin API (POST)
-
-Background:
-  * url baseURL + '/api/Security/FirebaseLogin'
-
-Scenario: POST /api/Security/FirebaseLogin
-# START GENERATED PARAMS
-  * param imageUrl = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request "string"
-  When method POST
-  Then status 200
-  # Add further validation here
+# Auto-generated feature file // removed // removed // removed
+ // removed // removed // removed
+Feature: /api/Security/FirebaseLogin (POST) // removed // removed // removed
+ // removed // removed // removed
+Background: // removed // removed // removed
+  * url baseURL + '/api/Security/FirebaseLogin' // removed // removed // removed
+ // removed // removed // removed
+Scenario: POST /api/Security/FirebaseLogin // removed // removed // removed
+  * param imageUrl = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request {} //removed // removed // removed // removed // removed
+  When method POST // removed // removed // removed
+  Then status 200 // removed // removed // removed
+  * param imageUrl = '<value>' //added
+  * param x-api-version = '<value>' //added

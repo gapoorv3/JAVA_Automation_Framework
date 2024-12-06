@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Card/Deposit3DSResponsePost API (POST)
+Feature: /api/Card/Deposit3DSResponsePost (POST)
 
 Background:
   * url baseURL + '/api/Card/Deposit3DSResponsePost'
 
 Scenario: POST /api/Card/Deposit3DSResponsePost
-# START GENERATED PARAMS
-  * param key = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param key = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param key = '<value>' //added

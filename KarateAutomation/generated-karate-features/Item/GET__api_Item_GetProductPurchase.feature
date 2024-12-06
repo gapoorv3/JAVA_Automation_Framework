@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Item/GetProductPurchase API (GET)
+Feature: /api/Item/GetProductPurchase (GET)
 
 Background:
   * url baseURL + '/api/Item/GetProductPurchase'
 
 Scenario: GET /api/Item/GetProductPurchase
-# START GENERATED PARAMS
-  * param token = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param token = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param token = '<value>' //added

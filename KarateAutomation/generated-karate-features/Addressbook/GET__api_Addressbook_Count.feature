@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/Count API (GET)
+Feature: /api/Addressbook/Count (GET)
 
 Background:
   * url baseURL + '/api/Addressbook/Count'
 
 Scenario: GET /api/Addressbook/Count
-# START GENERATED PARAMS
-  * param contactId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param contactId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param contactId = '<value>' //added
+  * param x-api-version = '<value>' //added

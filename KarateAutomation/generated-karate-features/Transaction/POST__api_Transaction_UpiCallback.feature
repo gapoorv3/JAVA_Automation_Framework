@@ -1,14 +1,12 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/UpiCallback API (POST)
+Feature: /api/Transaction/UpiCallback (POST)
 
 Background:
   * url baseURL + '/api/Transaction/UpiCallback'
 
 Scenario: POST /api/Transaction/UpiCallback
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added

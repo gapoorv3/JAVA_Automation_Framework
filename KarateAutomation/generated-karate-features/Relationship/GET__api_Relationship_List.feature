@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Relationship/List API (GET)
+Feature: /api/Relationship/List (GET)
 
 Background:
   * url baseURL + '/api/Relationship/List'
 
 Scenario: GET /api/Relationship/List
-# START GENERATED PARAMS
-  * param filter = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param filter = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param filter = '<value>' //added
+  * param x-api-version = '<value>' //added

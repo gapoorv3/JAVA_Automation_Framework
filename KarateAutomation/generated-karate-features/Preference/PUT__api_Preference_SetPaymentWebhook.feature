@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetPaymentWebhook API (PUT)
+Feature: /api/Preference/SetPaymentWebhook (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetPaymentWebhook'
 
 Scenario: PUT /api/Preference/SetPaymentWebhook
-# START GENERATED PARAMS
-  * param url = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param url = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param url = '<value>' //added

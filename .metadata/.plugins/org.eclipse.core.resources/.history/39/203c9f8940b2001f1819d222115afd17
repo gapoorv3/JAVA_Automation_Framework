@@ -1,0 +1,20 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Contact/SetPostalAddress API (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/SetPostalAddress'
+
+Scenario: PUT /api/Contact/SetPostalAddress
+  * header x-api-version = '<value>'
+  * request {
+    "address": "string",
+    "countryCode": "string",
+    "street": "string",
+    "city": "string",
+    "stateProvinceRegion": "string",
+    "zipPostalCode": "string"
+}
+  When method PUT
+  Then status 200
+  # Add further validation here

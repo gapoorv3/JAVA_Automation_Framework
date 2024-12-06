@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Agent/ReferenceRequest API (PUT)
+Feature: /api/Agent/ReferenceRequest (PUT)
 
 Background:
   * url baseURL + '/api/Agent/ReferenceRequest'
 
 Scenario: PUT /api/Agent/ReferenceRequest
-# START GENERATED PARAMS
-  * param recipientId = '<value>'
-  * param cancel = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param recipientId = '<value>' //removed
+  * param cancel = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param cancel = '<value>' //added
+  * param recipientId = '<value>' //added
+  * param x-api-version = '<value>' //added

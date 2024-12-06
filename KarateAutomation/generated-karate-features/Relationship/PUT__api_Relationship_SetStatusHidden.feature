@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Relationship/SetStatusHidden API (PUT)
+Feature: /api/Relationship/SetStatusHidden (PUT)
 
 Background:
   * url baseURL + '/api/Relationship/SetStatusHidden'
 
 Scenario: PUT /api/Relationship/SetStatusHidden
-# START GENERATED PARAMS
-  * param relatedContactId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param relatedContactId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param relatedContactId = '<value>' //added
+  * param x-api-version = '<value>' //added

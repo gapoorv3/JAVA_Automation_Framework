@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/ApprovalReject API (GET)
+Feature: /api/Transaction/ApprovalReject (GET)
 
 Background:
   * url baseURL + '/api/Transaction/ApprovalReject'
 
 Scenario: GET /api/Transaction/ApprovalReject
-# START GENERATED PARAMS
-  * param key = '<value>'
-  * param reason = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param key = '<value>' //removed
+  * param reason = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param reason = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param key = '<value>' //added

@@ -1,30 +1,42 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/CardDeposit API (POST)
+Feature: /api/Transaction/CardDeposit (POST)
 
 Background:
   * url baseURL + '/api/Transaction/CardDeposit'
 
 Scenario: POST /api/Transaction/CardDeposit
-# START GENERATED PARAMS
-  * param useApprovalProcess = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "description": "string",
-    "reference": "string",
-    "amount": "<value>",
-    "currencyCode": "string",
-    "accountId": 0,
-    "transferAccountId": 0,
-    "customer": "string",
-    "customerData": "<value>",
-    "creditCard": "<value>",
-    "routingCode": "string",
-    "productCode": "string",
-    "redirect": "string",
-    "sourceType": "string"
+  * param useApprovalProcess = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "description": "string", // removed // removed // removed
+    "reference": "string", // removed // removed // removed
+    "amount": 0.0, // removed // removed // removed
+    "currencyCode": "string", // removed // removed // removed
+    "accountId": 0, // removed // removed // removed
+    "transferAccountId": 0, // removed // removed // removed
+    "customer": "string", // removed // removed // removed
+    "customerData": "<unknown_type>", // removed // removed // removed
+    "creditCard": "<unknown_type>", // removed // removed // removed
+    "routingCode": "string", // removed // removed // removed
+    "productCode": "string", // removed // removed // removed
+    "redirect": "string", // removed // removed // removed
+    "sourceType": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param redirect = '<value>' //added // removed // removed // removed
+  * param amount = '<value>' //added // removed // removed // removed
+  * param transferAccountId = '<value>' //added // removed // removed // removed
+  * param description = '<value>' //added // removed // removed // removed
+  * param customerData = '<value>' //added // removed // removed // removed
+  * param useApprovalProcess = '<value>' //added
+  * param reference = '<value>' //added // removed // removed // removed
+  * param accountId = '<value>' //added // removed // removed // removed
+  * param productCode = '<value>' //added // removed // removed // removed
+  * param sourceType = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param creditCard = '<value>' //added // removed // removed // removed
+  * param currencyCode = '<value>' //added // removed // removed // removed
+  * param routingCode = '<value>' //added // removed // removed // removed
+  * param customer = '<value>' //added // removed // removed // removed

@@ -1,0 +1,9 @@
+# START GENERATED PARAMS
+  * path 'accountId' = '<value>'
+  * param fromDate = '<value>'
+  * param toDate = '<value>'
+  * param limit = '<value>'
+  * param format = '<value>'
+  * header x-api-version = '<value>'
+# END GENERATED PARAMS
+

@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Category/UpdateProperty (PUT)
+
+Background:
+  * url baseURL + '/api/Category/UpdateProperty'
+
+Scenario: PUT /api/Category/UpdateProperty
+  * param x-api-version = '<value>'
+  * request {}
+  When method PUT
+  Then status 200

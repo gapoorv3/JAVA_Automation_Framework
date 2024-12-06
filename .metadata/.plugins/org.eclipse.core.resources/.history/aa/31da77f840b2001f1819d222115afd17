@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/AgentWithdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/AgentWithdrawal'
+
+Scenario: POST /api/Transaction/AgentWithdrawal
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

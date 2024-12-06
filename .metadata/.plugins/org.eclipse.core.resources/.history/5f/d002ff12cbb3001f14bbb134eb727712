@@ -1,0 +1,18 @@
+# Auto-generated feature file
+
+Feature: /api/Agent/AgentRequestPayment (POST)
+
+Background:
+  * url baseURL + '/api/Agent/AgentRequestPayment'
+
+Scenario: POST /api/Agent/AgentRequestPayment
+  * header x-api-version = '<value>'
+  * request {
+    "description": "string",
+    "reference": "string",
+    "amount": 0.0,
+    "fromAgentId": 0,
+    "toAgentId": 0
+}
+  When method POST
+  Then status 200

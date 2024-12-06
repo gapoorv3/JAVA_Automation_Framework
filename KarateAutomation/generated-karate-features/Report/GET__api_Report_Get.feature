@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Report/Get API (GET)
+Feature: /api/Report/Get (GET)
 
 Background:
   * url baseURL + '/api/Report/Get'
 
 Scenario: GET /api/Report/Get
-# START GENERATED PARAMS
-  * param type = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param type = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param type = '<value>' //added

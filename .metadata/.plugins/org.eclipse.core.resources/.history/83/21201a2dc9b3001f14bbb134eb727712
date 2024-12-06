@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Merchant/AddProduct (POST)
+
+Background:
+  * url baseURL + '/api/Merchant/AddProduct'
+
+Scenario: POST /api/Merchant/AddProduct
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

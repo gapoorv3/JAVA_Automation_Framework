@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/Hide/{id} API (PUT)
+Feature: /api/Task/Hide/{id} (PUT)
 
 Background:
   * url baseURL + '/api/Task/Hide/{id}'
 
 Scenario: PUT /api/Task/Hide/{id}
-# START GENERATED PARAMS
-  * path 'id' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

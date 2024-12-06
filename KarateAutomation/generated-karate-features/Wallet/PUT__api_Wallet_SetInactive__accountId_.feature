@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Wallet/SetInactive/{accountId} API (PUT)
+Feature: /api/Wallet/SetInactive/{accountId} (PUT)
 
 Background:
   * url baseURL + '/api/Wallet/SetInactive/{accountId}'
 
 Scenario: PUT /api/Wallet/SetInactive/{accountId}
-# START GENERATED PARAMS
-  * path 'accountId' = '<value>'
-  * param value = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param value = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param accountId = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added

@@ -1,20 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Task/AddAttachment/{id} API (POST)
+Feature: /api/Task/AddAttachment/{id} (POST)
 
 Background:
   * url baseURL + '/api/Task/AddAttachment/{id}'
 
 Scenario: POST /api/Task/AddAttachment/{id}
-# START GENERATED PARAMS
-  * path 'id' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "file": [
-        "string"
-    ]
+  * param id = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "file": "<value>" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param file = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added

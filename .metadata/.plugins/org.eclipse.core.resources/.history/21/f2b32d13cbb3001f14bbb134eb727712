@@ -1,0 +1,19 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/MPesaWidthdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/MPesaWidthdrawal'
+
+Scenario: POST /api/Transaction/MPesaWidthdrawal
+  * param useApprovalProcess = '<value>'
+  * header x-api-version = '<value>'
+  * request {
+    "description": "string",
+    "reference": "string",
+    "amount": 0.0,
+    "accountId": 0,
+    "mobileNumber": "string"
+}
+  When method POST
+  Then status 200

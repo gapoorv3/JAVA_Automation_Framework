@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/DeleteApiKey/{taskId} API (DELETE)
+Feature: /api/Profile/DeleteApiKey/{taskId} (DELETE)
 
 Background:
   * url baseURL + '/api/Profile/DeleteApiKey/{taskId}'
 
 Scenario: DELETE /api/Profile/DeleteApiKey/{taskId}
-# START GENERATED PARAMS
-  * path 'taskId' = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param taskId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method DELETE
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param taskId = '<value>' //added

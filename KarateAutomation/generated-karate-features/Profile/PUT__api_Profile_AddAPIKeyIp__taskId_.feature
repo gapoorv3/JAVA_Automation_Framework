@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Profile/AddAPIKeyIp/{taskId} API (PUT)
+Feature: /api/Profile/AddAPIKeyIp/{taskId} (PUT)
 
 Background:
   * url baseURL + '/api/Profile/AddAPIKeyIp/{taskId}'
 
 Scenario: PUT /api/Profile/AddAPIKeyIp/{taskId}
-# START GENERATED PARAMS
-  * path 'taskId' = '<value>'
-  * param ipAddress = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param taskId = '<value>' //removed
+  * param ipAddress = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param ipAddress = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param taskId = '<value>' //added

@@ -1,0 +1,13 @@
+# Auto-generated feature file
+
+Feature: /api/Security/FirebaseLogin (POST)
+
+Background:
+  * url baseURL + '/api/Security/FirebaseLogin'
+
+Scenario: POST /api/Security/FirebaseLogin
+  * param imageUrl = '<value>'
+  * header x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

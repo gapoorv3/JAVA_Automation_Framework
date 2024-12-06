@@ -1,0 +1,13 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Item/GetProductTransactions/{token} API (GET)
+
+Background:
+  * url baseURL + '/api/Item/GetProductTransactions/{token}'
+
+Scenario: GET /api/Item/GetProductTransactions/{token}
+  * path 'token' = '<value>'
+  * header x-api-version = '<value>'
+  When method GET
+  Then status 200
+  # Add further validation here

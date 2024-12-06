@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Wallet/MonthlyBalances API (GET)
+Feature: /api/Wallet/MonthlyBalances (GET)
 
 Background:
   * url baseURL + '/api/Wallet/MonthlyBalances'
 
 Scenario: GET /api/Wallet/MonthlyBalances
-# START GENERATED PARAMS
-  * param accountId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param accountId = '<value>' //added
+  * param x-api-version = '<value>' //added

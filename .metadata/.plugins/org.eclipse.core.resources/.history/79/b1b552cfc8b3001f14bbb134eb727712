@@ -1,0 +1,13 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/AddUpi (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/AddUpi'
+
+Scenario: POST /api/Transaction/AddUpi
+  * param useApprovalProcess = '<value>'
+  * param x-api-version = '<value>'
+  * request {}
+  When method POST
+  Then status 200

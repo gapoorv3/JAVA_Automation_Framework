@@ -1,0 +1,15 @@
+# Auto-generated feature file
+
+Feature: /api/Merchant/UserSummary (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/UserSummary'
+
+Scenario: GET /api/Merchant/UserSummary
+  * param contactId = '<value>'
+  * param fromDate = '<value>'
+  * param toDate = '<value>'
+  * param grain = '<value>'
+  * param x-api-version = '<value>'
+  When method GET
+  Then status 200

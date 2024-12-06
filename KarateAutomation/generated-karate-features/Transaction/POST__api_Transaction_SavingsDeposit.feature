@@ -1,20 +1,22 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/SavingsDeposit API (POST)
+Feature: /api/Transaction/SavingsDeposit (POST)
 
 Background:
   * url baseURL + '/api/Transaction/SavingsDeposit'
 
 Scenario: POST /api/Transaction/SavingsDeposit
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "description": "string",
-    "reference": "string",
-    "amount": "<value>",
-    "accountId": 0
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "description": "string", // removed // removed // removed
+    "reference": "string", // removed // removed // removed
+    "amount": 0.0, // removed // removed // removed
+    "accountId": 0 // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param reference = '<value>' //added // removed // removed // removed
+  * param accountId = '<value>' //added // removed // removed // removed
+  * param amount = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added
+  * param description = '<value>' //added // removed // removed // removed

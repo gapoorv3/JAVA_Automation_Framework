@@ -1,0 +1,12 @@
+# This file was automatically generated. Do not modify unless you know what you're doing.
+
+Feature: /api/Profile/GetAuthenticatorCode API (GET)
+
+Background:
+  * url baseURL + '/api/Profile/GetAuthenticatorCode'
+
+Scenario: GET /api/Profile/GetAuthenticatorCode
+  * header x-api-version = '<value>'
+  When method GET
+  Then status 200
+  # Add further validation here

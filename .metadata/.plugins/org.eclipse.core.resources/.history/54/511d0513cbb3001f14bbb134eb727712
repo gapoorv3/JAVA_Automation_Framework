@@ -1,0 +1,15 @@
+# Auto-generated feature file
+
+Feature: /api/Category/SetPdfAttachment (POST)
+
+Background:
+  * url baseURL + '/api/Category/SetPdfAttachment'
+
+Scenario: POST /api/Category/SetPdfAttachment
+  * param hashId = '<value>'
+  * header x-api-version = '<value>'
+  * request {
+    "file": "string"
+}
+  When method POST
+  Then status 200

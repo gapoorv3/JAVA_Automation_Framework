@@ -1,18 +1,20 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Rule/Validate API (GET)
+Feature: /api/Rule/Validate (GET)
 
 Background:
   * url baseURL + '/api/Rule/Validate'
 
 Scenario: GET /api/Rule/Validate
-# START GENERATED PARAMS
-  * param hashId = '<value>'
-  * param accountId = '<value>'
-  * param contactId = '<value>'
-  * param amount = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param hashId = '<value>' //removed
+  * param accountId = '<value>' //removed
+  * param contactId = '<value>' //removed
+  * param amount = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param accountId = '<value>' //added
+  * param amount = '<value>' //added
+  * param contactId = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param hashId = '<value>' //added

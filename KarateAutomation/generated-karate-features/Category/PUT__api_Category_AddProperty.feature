@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Category/AddProperty API (PUT)
+Feature: /api/Category/AddProperty (PUT)
 
 Background:
   * url baseURL + '/api/Category/AddProperty'
 
 Scenario: PUT /api/Category/AddProperty
-# START GENERATED PARAMS
-  * param hashId = '<value>'
-  * param name = '<value>'
-  * param type = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param hashId = '<value>' //removed
+  * param name = '<value>' //removed
+  * param type = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param name = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param type = '<value>' //added
+  * param hashId = '<value>' //added

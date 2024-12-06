@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Item/SetProductAmount API (PUT)
+Feature: /api/Item/SetProductAmount (PUT)
 
 Background:
   * url baseURL + '/api/Item/SetProductAmount'
 
 Scenario: PUT /api/Item/SetProductAmount
-# START GENERATED PARAMS
-  * param id = '<value>'
-  * param amount = '<value>'
-  * param currencyCode = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param id = '<value>' //removed
+  * param amount = '<value>' //removed
+  * param currencyCode = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method PUT
   Then status 200
-  # Add further validation here
+  * param amount = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param id = '<value>' //added
+  * param currencyCode = '<value>' //added

@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Agent/GetPendingSubAgentRequestId API (GET)
+Feature: /api/Agent/GetPendingSubAgentRequestId (GET)
 
 Background:
   * url baseURL + '/api/Agent/GetPendingSubAgentRequestId'
 
 Scenario: GET /api/Agent/GetPendingSubAgentRequestId
-# START GENERATED PARAMS
-  * param agentId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param agentId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param agentId = '<value>' //added
+  * param x-api-version = '<value>' //added

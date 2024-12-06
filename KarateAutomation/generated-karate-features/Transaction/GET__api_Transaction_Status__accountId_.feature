@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Transaction/Status/{accountId} API (GET)
+Feature: /api/Transaction/Status/{accountId} (GET)
 
 Background:
   * url baseURL + '/api/Transaction/Status/{accountId}'
 
 Scenario: GET /api/Transaction/Status/{accountId}
-# START GENERATED PARAMS
-  * path 'accountId' = '<value>'
-  * param reference = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param accountId = '<value>' //removed
+  * param reference = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param reference = '<value>' //added
+  * param accountId = '<value>' //added
+  * param x-api-version = '<value>' //added

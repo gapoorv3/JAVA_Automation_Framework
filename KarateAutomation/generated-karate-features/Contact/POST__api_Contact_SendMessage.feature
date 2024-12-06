@@ -1,16 +1,16 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Contact/SendMessage API (POST)
+Feature: /api/Contact/SendMessage (POST)
 
 Background:
   * url baseURL + '/api/Contact/SendMessage'
 
 Scenario: POST /api/Contact/SendMessage
-# START GENERATED PARAMS
-  * param message = '<value>'
-  * param recipientId = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param message = '<value>' //removed
+  * param recipientId = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param recipientId = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param message = '<value>' //added

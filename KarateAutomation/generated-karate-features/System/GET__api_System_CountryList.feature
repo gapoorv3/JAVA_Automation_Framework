@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/System/CountryList API (GET)
+Feature: /api/System/CountryList (GET)
 
 Background:
   * url baseURL + '/api/System/CountryList'
 
 Scenario: GET /api/System/CountryList
-# START GENERATED PARAMS
-  * param all = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param all = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param all = '<value>' //added
+  * param x-api-version = '<value>' //added

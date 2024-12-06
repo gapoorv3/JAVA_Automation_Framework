@@ -1,17 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Security/GetResetKey API (GET)
+Feature: /api/Security/GetResetKey (GET)
 
 Background:
   * url baseURL + '/api/Security/GetResetKey'
 
 Scenario: GET /api/Security/GetResetKey
-# START GENERATED PARAMS
-  * param value = '<value>'
-  * param otp = '<value>'
-  * param captcha = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param value = '<value>' //removed
+  * param otp = '<value>' //removed
+  * param captcha = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method GET
   Then status 200
-  # Add further validation here
+  * param captcha = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param otp = '<value>' //added
+  * param value = '<value>' //added

@@ -1,19 +1,18 @@
-# MANUALLY EDITED
-Feature: /api/Security/GetToken API (POST)
+# Auto-generated feature file
+
+Feature: /api/Security/GetToken (POST)
 
 Background:
   * url baseURL + '/api/Security/GetToken'
 
 Scenario: POST /api/Security/GetToken
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-
-
-  * request {
+  * param x-api-version = '<value>' 
+  * request {  
+    "otp": "<value>", // added
     "userName": "string",
     "password": "string"
 }
   When method POST
   Then status 200
-  # Add further validation here
+
+

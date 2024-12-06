@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Document/Add API (POST)
+Feature: /api/Document/Add (POST)
 
 Background:
   * url baseURL + '/api/Document/Add'
 
 Scenario: POST /api/Document/Add
-# START GENERATED PARAMS
-  * param code = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "file": "string"
+  * param code = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "file": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param code = '<value>' //added
+  * param file = '<value>' //added // removed // removed // removed
+  * param x-api-version = '<value>' //added

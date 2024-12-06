@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Preference/SetProfilePicture API (PUT)
+Feature: /api/Preference/SetProfilePicture (PUT)
 
 Background:
   * url baseURL + '/api/Preference/SetProfilePicture'
 
 Scenario: PUT /api/Preference/SetProfilePicture
-# START GENERATED PARAMS
-  * param pictureURL = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "file": "string"
+  * param pictureURL = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "file": "string" // removed // removed // removed
 }
   When method PUT
   Then status 200
-  # Add further validation here
+  * param file = '<value>' //added // removed // removed // removed
+  * param pictureURL = '<value>' //added
+  * param x-api-version = '<value>' //added

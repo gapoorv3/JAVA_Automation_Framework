@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/RenameUser API (PUT)
+Feature: /api/Addressbook/RenameUser (PUT)
 
 Background:
   * url baseURL + '/api/Addressbook/RenameUser'
 
 Scenario: PUT /api/Addressbook/RenameUser
-# START GENERATED PARAMS
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "id": 0,
-    "description": "string"
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "id": 0, // removed // removed // removed
+    "description": "string" // removed // removed // removed
 }
   When method PUT
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param description = '<value>' //added // removed // removed // removed
+  * param id = '<value>' //added // removed // removed // removed

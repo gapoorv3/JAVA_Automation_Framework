@@ -1,0 +1,12 @@
+# Auto-generated feature file
+
+Feature: /api/Contact/SetIndividualDetails (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/SetIndividualDetails'
+
+Scenario: PUT /api/Contact/SetIndividualDetails
+  * param x-api-version = '<value>'
+  * request {}
+  When method PUT
+  Then status 200

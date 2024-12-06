@@ -1,18 +1,18 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Addressbook/ValidateUser API (POST)
+Feature: /api/Addressbook/ValidateUser (POST)
 
 Background:
   * url baseURL + '/api/Addressbook/ValidateUser'
 
 Scenario: POST /api/Addressbook/ValidateUser
-# START GENERATED PARAMS
-  * param ruleName = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
-  * request {
-    "value": "string"
+  * param ruleName = '<value>' //removed
+  * param x-api-version = '<value>' //removed
+  * request { //removed // removed
+    "value": "string" // removed // removed // removed
 }
   When method POST
   Then status 200
-  # Add further validation here
+  * param ruleName = '<value>' //added
+  * param x-api-version = '<value>' //added
+  * param value = '<value>' //added // removed // removed // removed

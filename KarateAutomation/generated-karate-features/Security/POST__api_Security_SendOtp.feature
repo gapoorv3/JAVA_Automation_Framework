@@ -1,15 +1,14 @@
-# This file was automatically generated. Do not modify unless you know what you're doing.
+# Auto-generated feature file
 
-Feature: /api/Security/SendOtp API (POST)
+Feature: /api/Security/SendOtp (POST)
 
 Background:
   * url baseURL + '/api/Security/SendOtp'
 
 Scenario: POST /api/Security/SendOtp
-# START GENERATED PARAMS
-  * param otpType = '<value>'
-  * header x-api-version = '<value>'
-# END GENERATED PARAMS
+  * param otpType = '<value>' //removed
+  * param x-api-version = '<value>' //removed
   When method POST
   Then status 200
-  # Add further validation here
+  * param x-api-version = '<value>' //added
+  * param otpType = '<value>' //added

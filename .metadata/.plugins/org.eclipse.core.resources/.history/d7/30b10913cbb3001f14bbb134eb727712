@@ -1,0 +1,19 @@
+# Auto-generated feature file
+
+Feature: /api/Contact/SetPhysicalAddress (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/SetPhysicalAddress'
+
+Scenario: PUT /api/Contact/SetPhysicalAddress
+  * header x-api-version = '<value>'
+  * request {
+    "address": "string",
+    "countryCode": "string",
+    "street": "string",
+    "city": "string",
+    "stateProvinceRegion": "string",
+    "zipPostalCode": "string"
+}
+  When method PUT
+  Then status 200
