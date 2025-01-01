@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Report/Get'
 
 Scenario: GET /api/Report/Get
-  * param type = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param type = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param type = '<value>' //added

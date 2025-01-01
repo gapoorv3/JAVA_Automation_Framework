@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Category/SetPdfAttachment'
 
 Scenario: POST /api/Category/SetPdfAttachment
-  * param hashId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param hashId = '<value>'
+* param x-api-version = '<value>'
   * request { //removed // removed
-    "file": "string" // removed // removed // removed
+    "file": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
 }
   When method POST
   Then status 200
-  * param file = '<value>' //added // removed // removed // removed
-  * param x-api-version = '<value>' //added
-  * param hashId = '<value>' //added

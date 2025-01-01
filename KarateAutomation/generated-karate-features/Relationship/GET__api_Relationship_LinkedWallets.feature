@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Relationship/LinkedWallets'
 
 Scenario: GET /api/Relationship/LinkedWallets
-  * param relatedContactId = '<value>' //removed
-  * param currencyCode = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param relatedContactId = '<value>'
+* param currencyCode = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param relatedContactId = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param currencyCode = '<value>' //added

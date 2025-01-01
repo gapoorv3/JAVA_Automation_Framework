@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Agent/SubAgentList'
 
 Scenario: GET /api/Agent/SubAgentList
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added

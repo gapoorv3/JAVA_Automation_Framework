@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Task/AnonymizeRequest'
 
 Scenario: POST /api/Task/AnonymizeRequest
-  * param reason = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param reason = '<value>'
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param reason = '<value>' //added
-  * param x-api-version = '<value>' //added

@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Security/Logout'
 
 Scenario: POST /api/Security/Logout
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added

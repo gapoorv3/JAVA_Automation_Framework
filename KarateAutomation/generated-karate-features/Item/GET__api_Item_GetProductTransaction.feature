@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Item/GetProductTransaction'
 
 Scenario: GET /api/Item/GetProductTransaction
-  * param key = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param key = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param key = '<value>' //added

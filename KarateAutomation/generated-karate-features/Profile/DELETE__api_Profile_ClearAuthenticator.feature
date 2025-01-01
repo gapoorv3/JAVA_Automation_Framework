@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Profile/ClearAuthenticator'
 
 Scenario: DELETE /api/Profile/ClearAuthenticator
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method DELETE
   Then status 200
-  * param x-api-version = '<value>' //added

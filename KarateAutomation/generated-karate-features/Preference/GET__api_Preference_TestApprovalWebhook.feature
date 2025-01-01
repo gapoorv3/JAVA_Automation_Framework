@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Preference/TestApprovalWebhook'
 
 Scenario: GET /api/Preference/TestApprovalWebhook
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added

@@ -6,11 +6,9 @@ Background:
   * url baseURL + '/api/Profile/ValidateAuthenticatorCode'
 
 Scenario: PUT /api/Profile/ValidateAuthenticatorCode
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   * request { //removed // removed
-    "value": "string" // removed // removed // removed
+    "value": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
 }
   When method PUT
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added // removed // removed // removed

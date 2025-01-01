@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Profile/Info'
 
 Scenario: GET /api/Profile/Info
-  * param value = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param value = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added

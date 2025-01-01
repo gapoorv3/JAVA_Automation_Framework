@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Agent/DeleteSubAgent'
 
 Scenario: DELETE /api/Agent/DeleteSubAgent
-  * param subAgentId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param subAgentId = '<value>'
+* param x-api-version = '<value>'
   When method DELETE
   Then status 200
-  * param subAgentId = '<value>' //added
-  * param x-api-version = '<value>' //added

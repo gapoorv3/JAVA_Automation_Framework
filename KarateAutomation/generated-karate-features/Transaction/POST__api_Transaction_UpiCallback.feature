@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Transaction/UpiCallback'
 
 Scenario: POST /api/Transaction/UpiCallback
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added

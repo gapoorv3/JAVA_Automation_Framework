@@ -6,15 +6,11 @@ Background:
   * url baseURL + '/api/Rule/Validate'
 
 Scenario: GET /api/Rule/Validate
-  * param hashId = '<value>' //removed
-  * param accountId = '<value>' //removed
-  * param contactId = '<value>' //removed
-  * param amount = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param hashId = '<value>'
+* param accountId = '<value>'
+* param contactId = '<value>'
+* param amount = '<value>' // added
+* param amount = '<value>' // added // removed
+  * param x-api-version = '<value>' // added
   When method GET
   Then status 200
-  * param accountId = '<value>' //added
-  * param amount = '<value>' //added
-  * param contactId = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param hashId = '<value>' //added

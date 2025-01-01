@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Agent/Wallets'
 
 Scenario: GET /api/Agent/Wallets
-  * param baseCurrencyCode = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param baseCurrencyCode = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param baseCurrencyCode = '<value>' //added
-  * param x-api-version = '<value>' //added

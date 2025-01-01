@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/System/CountryList'
 
 Scenario: GET /api/System/CountryList
-  * param all = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param all = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param all = '<value>' //added
-  * param x-api-version = '<value>' //added

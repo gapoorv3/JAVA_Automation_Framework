@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Wallet/SetInactive/{accountId}'
 
 Scenario: PUT /api/Wallet/SetInactive/{accountId}
-  * param accountId = '<value>' //removed
-  * param value = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param accountId = '<value>'
+* param value = '<value>'
+* param x-api-version = '<value>'
   When method PUT
   Then status 200
-  * param accountId = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added

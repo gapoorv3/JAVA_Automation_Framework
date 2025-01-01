@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Document/Types'
 
 Scenario: GET /api/Document/Types
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added

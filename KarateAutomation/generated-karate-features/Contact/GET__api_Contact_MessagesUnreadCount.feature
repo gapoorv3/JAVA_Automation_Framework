@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Contact/MessagesUnreadCount'
 
 Scenario: GET /api/Contact/MessagesUnreadCount
-  * param id = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param id = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param id = '<value>' //added

@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Relationship/GetModel'
 
 Scenario: GET /api/Relationship/GetModel
-  * param relatedContactId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param relatedContactId = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param relatedContactId = '<value>' //added
-  * param x-api-version = '<value>' //added

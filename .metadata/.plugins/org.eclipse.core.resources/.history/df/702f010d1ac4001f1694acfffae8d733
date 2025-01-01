@@ -1,0 +1,42 @@
+# Auto-generated feature file
+
+Feature: /api/Security/GetToken (POST)
+
+Background:
+  * url baseURL + '/api/Security/GetToken'
+
+@negative
+Scenario Outline: POST /api/Security/GetToken
+  * param x-api-version = '<value>' 
+  * request {  
+    "password": "<value>", // added
+    "otp": "<value>", // added
+    "userName": "string"
+    "password": "<value>", // added
+    "otp": "<value>", // added
+    "userName": "string"
+    "password": "<value>", // added
+    "otp": "<value>", // added
+    "userName": "string"
+}
+  When method POST
+  Then status 200
+
+@positive
+Scenario Outline: POST /api/Security/GetToken
+  * param x-api-version = '<value>' 
+  * request {  
+    "password": "string" //added
+    "otp": "<value>", // added
+    "userName": "string"
+    "password": "string" //added
+    "otp": "<value>", // added
+    "userName": "string"
+    "password": "string" //added
+    "otp": "<value>", // added
+    "userName": "string"
+}
+  When method POST
+  Then status 200
+
+

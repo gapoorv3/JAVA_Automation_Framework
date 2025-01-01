@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Agent/AddSubAgentRequest'
 
 Scenario: POST /api/Agent/AddSubAgentRequest
-  * param agentId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param agentId = '<value>'
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param agentId = '<value>' //added
-  * param x-api-version = '<value>' //added

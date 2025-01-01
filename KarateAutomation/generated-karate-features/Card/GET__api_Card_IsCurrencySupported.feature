@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Card/IsCurrencySupported'
 
 Scenario: GET /api/Card/IsCurrencySupported
-  * param currencyCode = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param currencyCode = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param currencyCode = '<value>' //added

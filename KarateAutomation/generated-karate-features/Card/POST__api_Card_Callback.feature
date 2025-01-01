@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Card/Callback'
 
 Scenario: POST /api/Card/Callback
-  * param key = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param key = '<value>'
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param key = '<value>' //added

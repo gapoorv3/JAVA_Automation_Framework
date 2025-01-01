@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Category/AddItem'
 
 Scenario: POST /api/Category/AddItem
-  * param name = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param name = '<value>'
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param name = '<value>' //added
-  * param x-api-version = '<value>' //added

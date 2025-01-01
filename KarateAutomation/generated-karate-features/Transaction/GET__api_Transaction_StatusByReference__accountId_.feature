@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Transaction/StatusByReference/{accountId}'
 
 Scenario: GET /api/Transaction/StatusByReference/{accountId}
-  * param accountId = '<value>' //removed
-  * param reference = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param accountId = '<value>'
+* param reference = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param reference = '<value>' //added
-  * param accountId = '<value>' //added
-  * param x-api-version = '<value>' //added

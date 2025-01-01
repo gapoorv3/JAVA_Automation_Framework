@@ -5,13 +5,24 @@ Feature: /api/Security/GetToken (POST)
 Background:
   * url baseURL + '/api/Security/GetToken'
 
-Scenario: POST /api/Security/GetToken
-  * param x-api-version = '<value>' 
+@negative
+Scenario Outline: POST /api/Security/GetToken
   * request {  
-    "otp": "<value>", // added
-    "userName": "string",
-    "password": "string"
+    "otp": "<value>",
+    "password": "<value>",
+    "userName": "<value>"
 }
+  When method POST
+  Then status 200
+
+@positive
+Scenario Outline: POST /api/Security/GetToken
+  * request {  
+    "userName": "<value>",
+    "password": "<value>",
+    "otp": "<value>"
+}
+
   When method POST
   Then status 200
 

@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Item/DeleteProduct'
 
 Scenario: DELETE /api/Item/DeleteProduct
-  * param id = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param id = '<value>'
+* param x-api-version = '<value>'
   When method DELETE
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param id = '<value>' //added

@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Addressbook/RenameUser'
 
 Scenario: PUT /api/Addressbook/RenameUser
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   * request { //removed // removed
-    "id": 0, // removed // removed // removed
-    "description": "string" // removed // removed // removed
+    "id": 0, // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
+    "description": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
 }
   When method PUT
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param description = '<value>' //added // removed // removed // removed
-  * param id = '<value>' //added // removed // removed // removed

@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Agent/ReferenceRequest'
 
 Scenario: PUT /api/Agent/ReferenceRequest
-  * param recipientId = '<value>' //removed
-  * param cancel = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param recipientId = '<value>'
+* param cancel = '<value>'
+* param x-api-version = '<value>'
   When method PUT
   Then status 200
-  * param cancel = '<value>' //added
-  * param recipientId = '<value>' //added
-  * param x-api-version = '<value>' //added

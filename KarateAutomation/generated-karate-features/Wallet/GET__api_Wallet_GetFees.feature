@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Wallet/GetFees'
 
 Scenario: GET /api/Wallet/GetFees
-  * param type = '<value>' //removed
-  * param currencyCode = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param type = '<value>'
+* param currencyCode = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param type = '<value>' //added
-  * param currencyCode = '<value>' //added

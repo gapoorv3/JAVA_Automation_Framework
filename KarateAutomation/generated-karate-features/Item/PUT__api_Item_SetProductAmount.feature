@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Item/SetProductAmount'
 
 Scenario: PUT /api/Item/SetProductAmount
-  * param id = '<value>' //removed
-  * param amount = '<value>' //removed
-  * param currencyCode = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param id = '<value>'
+* param amount = '<value>'
+* param currencyCode = '<value>'
+* param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added // removed
   When method PUT
   Then status 200
-  * param amount = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param id = '<value>' //added
-  * param currencyCode = '<value>' //added

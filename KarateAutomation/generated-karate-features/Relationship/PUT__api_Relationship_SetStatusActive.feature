@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Relationship/SetStatusActive'
 
 Scenario: PUT /api/Relationship/SetStatusActive
-  * param relatedContactId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param relatedContactId = '<value>'
+* param x-api-version = '<value>'
   When method PUT
   Then status 200
-  * param relatedContactId = '<value>' //added
-  * param x-api-version = '<value>' //added

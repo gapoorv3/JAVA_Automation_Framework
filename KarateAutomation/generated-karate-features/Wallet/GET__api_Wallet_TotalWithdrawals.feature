@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Wallet/TotalWithdrawals'
 
 Scenario: GET /api/Wallet/TotalWithdrawals
-  * param fromDate = '<value>' //removed
-  * param toDate = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param fromDate = '<value>'
+* param toDate = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param fromDate = '<value>' //added
-  * param toDate = '<value>' //added
-  * param x-api-version = '<value>' //added

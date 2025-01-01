@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/System/CurrencyList'
 
 Scenario: GET /api/System/CurrencyList
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added

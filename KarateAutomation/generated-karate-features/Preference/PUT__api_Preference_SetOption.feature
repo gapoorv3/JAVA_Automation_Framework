@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Preference/SetOption'
 
 Scenario: PUT /api/Preference/SetOption
-  * param name = '<value>' //removed
-  * param value = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param name = '<value>'
+* param value = '<value>'
+* param x-api-version = '<value>'
   When method PUT
   Then status 200
-  * param name = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added

@@ -6,11 +6,9 @@ Background:
   * url baseURL + '/api/Security/SendRenewToken'
 
 Scenario: POST /api/Security/SendRenewToken
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   * request { //removed // removed
-    "value": "string" // removed // removed // removed
+    "value": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
 }
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added // removed // removed // removed

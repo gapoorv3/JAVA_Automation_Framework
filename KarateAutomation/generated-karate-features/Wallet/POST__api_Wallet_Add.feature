@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Wallet/Add'
 
 Scenario: POST /api/Wallet/Add
-  * param contactId = '<value>' //removed
-  * param currencyCode = '<value>' //removed
-  * param savings = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param contactId = '<value>'
+* param currencyCode = '<value>'
+* param savings = '<value>'
+* param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added // removed
   When method POST
   Then status 200
-  * param contactId = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param savings = '<value>' //added
-  * param currencyCode = '<value>' //added

@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Relationship/Transactions'
 
 Scenario: GET /api/Relationship/Transactions
-  * param relatedContactId = '<value>' //removed
-  * param currencyCode = '<value>' //removed
-  * param from = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param relatedContactId = '<value>'
+* param currencyCode = '<value>'
+* param from = '<value>'
+* param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added // removed
   When method GET
   Then status 200
-  * param relatedContactId = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param from = '<value>' //added
-  * param currencyCode = '<value>' //added

@@ -6,19 +6,13 @@ Background:
   * url baseURL + '/api/Wallet/StatementReport/{accountId}'
 
 Scenario: GET /api/Wallet/StatementReport/{accountId}
-  * param accountId = '<value>' //removed
-  * param fromDate = '<value>' //removed
-  * param toDate = '<value>' //removed
-  * param limit = '<value>' //removed
-  * param format = '<value>' //removed
-  * param includeLogs = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param accountId = '<value>'
+* param fromDate = '<value>'
+* param toDate = '<value>'
+* param limit = '<value>' // added
+* param limit = '<value>' // added // removed
+  * param format = '<value>' // added
+  * param includeLogs = '<value>' // added
+  * param x-api-version = '<value>' // added
   When method GET
   Then status 200
-  * param fromDate = '<value>' //added
-  * param accountId = '<value>' //added
-  * param includeLogs = '<value>' //added
-  * param toDate = '<value>' //added
-  * param limit = '<value>' //added
-  * param format = '<value>' //added
-  * param x-api-version = '<value>' //added

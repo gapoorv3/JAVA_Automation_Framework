@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Profile/DeleteApiKey/{taskId}'
 
 Scenario: DELETE /api/Profile/DeleteApiKey/{taskId}
-  * param taskId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param taskId = '<value>'
+* param x-api-version = '<value>'
   When method DELETE
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param taskId = '<value>' //added

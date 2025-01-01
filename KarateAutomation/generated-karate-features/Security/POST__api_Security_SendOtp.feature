@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Security/SendOtp'
 
 Scenario: POST /api/Security/SendOtp
-  * param otpType = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param otpType = '<value>'
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param otpType = '<value>' //added

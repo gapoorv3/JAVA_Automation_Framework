@@ -6,11 +6,8 @@ Background:
   * url baseURL + '/api/Merchant/SetRoutingCodeSortOrder'
 
 Scenario: PUT /api/Merchant/SetRoutingCodeSortOrder
-  * param code = '<value>' //removed
-  * param value = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param code = '<value>'
+* param value = '<value>'
+* param x-api-version = '<value>'
   When method PUT
   Then status 200
-  * param code = '<value>' //added
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added

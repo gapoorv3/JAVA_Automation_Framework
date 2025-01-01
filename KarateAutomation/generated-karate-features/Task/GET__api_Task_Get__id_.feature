@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Task/Get/{id}'
 
 Scenario: GET /api/Task/Get/{id}
-  * param id = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param id = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param id = '<value>' //added

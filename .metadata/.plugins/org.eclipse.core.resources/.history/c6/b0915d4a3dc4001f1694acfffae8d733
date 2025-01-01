@@ -1,0 +1,21 @@
+# Auto-generated feature file
+
+Feature: /api/Security/GetCaptcha (GET)
+
+Background:
+  * url baseURL + '/api/Security/GetCaptcha'
+
+@negative
+Scenario: GET /api/Security/GetCaptcha 
+	* param null = '<value>' // removed
+  * param value = '<value>' // added // removed
+  * param x-api-version = '<value>' // added // removed
+  * param value = '<value>' // added
+  * param x-api-version = '<value>' // added
+  When method GET
+  Then status 200
+ 
+@positive
+Scenario: GET /api/Security/GetCaptcha 
+  When method GET
+  Then status 200

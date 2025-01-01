@@ -1,0 +1,277 @@
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.PathItem;
+import io.swagger.v3.oas.models.Paths;
+import io.swagger.v3.oas.models.Operation;
+import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.media.*;
+import io.swagger.v3.parser.OpenAPIV3Parser;
+import io.swagger.v3.parser.core.models.SwaggerParseResult;
+
+import java.io.*;
+import java.util.*;
+
+public class KarateFeatureGenerator {
+
+    public static void main(String[] args) {
+        String swaggerUrl = "https://sprint.xprizo.com/swagger/v1/swagger.json"; // Replace with your OpenAPI URL
+
+        // Parse the OpenAPI specification
+        SwaggerParseResult parseResult = new OpenAPIV3Parser().readLocation(swaggerUrl, null, null);
+        OpenAPI openAPI = parseResult.getOpenAPI();
+
+        if (openAPI == null) {
+            System.out.println("Failed to parse OpenAPI specification. Errors: " + parseResult.getMessages());
+            return;
+        }
+
+        // Base output directory for Karate feature files
+        String baseOutputDir = "./generated-karate-features";
+        File baseDirectory = new File(baseOutputDir);
+        if (!baseDirectory.exists() && !baseDirectory.mkdir()) {
+            System.out.println("Failed to create base output directory: " + baseOutputDir);
+            return;
+        }
+
+        // Iterate through all API paths and methods
+        Paths paths = openAPI.getPaths();
+        for (Map.Entry<String, PathItem> entry : paths.entrySet()) {
+            String path = entry.getKey();
+            PathItem pathItem = entry.getValue();
+
+            // Process each HTTP method
+            if (pathItem.getGet() != null) {
+                processFeatureFile(openAPI, path, "GET", pathItem.getGet(), baseOutputDir);
+            }
+            if (pathItem.getPost() != null) {
+                processFeatureFile(openAPI, path, "POST", pathItem.getPost(), baseOutputDir);
+            }
+            if (pathItem.getPut() != null) {
+                processFeatureFile(openAPI, path, "PUT", pathItem.getPut(), baseOutputDir);
+            }
+            if (pathItem.getDelete() != null) {
+                processFeatureFile(openAPI, path, "DELETE", pathItem.getDelete(), baseOutputDir);
+            }
+            if (pathItem.getPatch() != null) {
+                processFeatureFile(openAPI, path, "PATCH", pathItem.getPatch(), baseOutputDir);
+            }
+        }
+
+        System.out.println("Karate feature files have been generated or updated in: " + baseOutputDir);
+    }
+
+    private static void processFeatureFile(OpenAPI openAPI, String path, String method, Operation operation, String baseOutputDir) {
+        if (operation == null) {
+            return;
+        }
+        //module name
+        List<String> tags = operation.getTags();
+        String moduleName = (tags != null && !tags.isEmpty()) ? tags.get(0) : "default_module";
+
+        String moduleOutputDir = baseOutputDir + "/" + sanitizeFileName(moduleName);
+        File moduleDirectory = new File(moduleOutputDir);
+        if (!moduleDirectory.exists() && !moduleDirectory.mkdir()) {
+            System.out.println("Failed to create module directory: " + moduleOutputDir);
+            return;
+        }
+        //feature file name
+        String operationId = operation.getOperationId();
+        String fileName = sanitizeFileName(operationId != null ? operationId : (method + "_" + path.replace("/", "_"))) + ".feature";
+        File featureFile = new File(moduleOutputDir + "/" + fileName);
+        //update feature file
+        if (featureFile.exists()) {
+            // Update existing feature file
+            updateFeatureFile(featureFile, openAPI, path, method, operation);
+        } else {
+            // Generate new feature file
+            generateFeatureFile(openAPI, path, method, operation, featureFile);
+        }
+    }
+
+    private static void updateFeatureFile(File featureFile, OpenAPI openAPI, String path, String method, Operation operation) {
+        try {
+            List<String> existingContent = readFeatureFile(featureFile);
+            List<String> updatedContent = new ArrayList<>();
+            Map<String, Integer> paramPositions = new LinkedHashMap<>(); // To track original positions of parameters
+            Set<String> swaggerParams = new LinkedHashSet<>();
+            Set<String> swaggerRequestBodyKeys = new LinkedHashSet<>();
+            Map<String, String> swaggerKeyTypes = new LinkedHashMap<>();
+
+            // Collect all Swagger parameters
+            if (operation.getParameters() != null) {
+                for (Parameter param : operation.getParameters()) {
+                    swaggerParams.add(param.getName());
+                    swaggerKeyTypes.put(param.getName(), param.getIn());
+                }
+            }
+
+            // Collect all request body keys
+            if (operation.getRequestBody() != null) {
+                Content content = operation.getRequestBody().getContent();
+                for (MediaType media : content.values()) {
+                    if (media.getSchema() != null) {
+                        swaggerRequestBodyKeys.addAll(extractKeysFromSchema(media.getSchema(), openAPI, new HashSet<>()));
+                    }
+                }
+            }
+
+            // Track positions of existing parameters and request body keys
+            boolean inRequestBody = false;
+            for (int i = 0; i < existingContent.size(); i++) {
+                String line = existingContent.get(i);
+                if (line.contains("* param")) {
+                    String key = extractKeyFromLine(line);
+                    paramPositions.put(key, i);
+                } else if (line.contains("request {")) {
+                    inRequestBody = true;
+                } else if (inRequestBody && line.contains("}")) {
+                    inRequestBody = false;
+                }
+            }
+
+            // Detect removed and added keys
+            Set<String> existingParams = paramPositions.keySet();
+            Set<String> removedParams = new HashSet<>(existingParams);
+            removedParams.removeAll(swaggerParams);
+
+            Set<String> addedParams = new LinkedHashSet<>(swaggerParams);
+            addedParams.removeAll(existingParams);
+
+            Set<String> removedRequestBodyKeys = new HashSet<>(swaggerRequestBodyKeys);
+            removedRequestBodyKeys.removeAll(swaggerRequestBodyKeys);
+
+            Set<String> addedRequestBodyKeys = new HashSet<>(swaggerRequestBodyKeys);
+            addedRequestBodyKeys.removeAll(swaggerRequestBodyKeys);
+
+            // Generate updated content
+            boolean requestBodyModified = false;
+            for (int i = 0; i < existingContent.size(); i++) {
+                String line = existingContent.get(i);
+                String key = extractKeyFromLine(line);
+
+                if (removedParams.contains(key)) {
+                    updatedContent.add(line + " // removed");
+                } else {
+                    updatedContent.add(line);
+                }
+
+                // Add missing parameters in their original positions
+                if (paramPositions.containsKey(key) && addedParams.contains(key)) {
+                    updatedContent.add("  * param " + key + " = '<value>' // added");
+                    addedParams.remove(key);
+                }
+
+                // Add missing request body keys if required
+                if (line.contains("request {") && !requestBodyModified) {
+                    requestBodyModified = true;
+                    for (String addedKey : addedRequestBodyKeys) {
+                        updatedContent.add("    \"" + addedKey + "\": \"<value>\", // added");
+                    }
+                }
+            }
+
+            // Add any remaining new parameters that couldn't be matched to positions
+            for (String addedParam : addedParams) {
+                updatedContent.add("  * param " + addedParam + " = '<value>' // added");
+            }
+
+            // Write the updated content back to the file
+            try (FileWriter writer = new FileWriter(featureFile)) {
+                for (String line : updatedContent) {
+                    writer.write(line + "\n");
+                }
+            }
+
+            System.out.println("Feature file updated: " + featureFile.getPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private static void generateFeatureFile(OpenAPI openAPI, String path, String method, Operation operation, File featureFile) {
+        try (FileWriter fileWriter = new FileWriter(featureFile)) {
+            StringBuilder featureContent = new StringBuilder();
+
+            featureContent.append("# Auto-generated feature file\n\n");
+            featureContent.append("Feature: ").append(path).append(" (").append(method).append(")\n\n");
+            featureContent.append("Background:\n");
+            featureContent.append("  * url baseURL + '").append(path).append("'\n\n");
+            featureContent.append("Scenario: ").append(method).append(" ").append(path).append("\n");
+
+            if (operation.getParameters() != null) {
+                for (Parameter param : operation.getParameters()) {
+                    featureContent.append("  * param ").append(param.getName()).append(" = '<value>'\n");
+                }
+            }
+
+            if (operation.getRequestBody() != null) {
+                Content content = operation.getRequestBody().getContent();
+                for (MediaType media : content.values()) {
+                    if (media.getSchema() != null) {
+                        featureContent.append("  * request ").append(resolveSchema(openAPI, media.getSchema(), new HashSet<>())).append("\n");
+                    }
+                }
+            }
+
+            featureContent.append("  When method ").append(method).append("\n");
+            featureContent.append("  Then status 200\n");
+
+            fileWriter.write(featureContent.toString());
+            System.out.println("Feature file generated: " + featureFile.getPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static List<String> readFeatureFile(File featureFile) throws IOException {
+        List<String> lines = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(featureFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+        }
+        return lines;
+    }
+
+    private static Set<String> extractKeysFromSchema(Schema<?> schema, OpenAPI openAPI, Set<String> visitedSchemas) {
+        Set<String> keys = new HashSet<>();
+        if (schema.get$ref() != null) {
+            String ref = schema.get$ref();
+            String schemaName = ref.substring(ref.lastIndexOf('/') + 1);
+            Schema<?> referencedSchema = openAPI.getComponents().getSchemas().get(schemaName);
+            if (referencedSchema != null && !visitedSchemas.contains(schemaName)) {
+                visitedSchemas.add(schemaName);
+                keys.addAll(extractKeysFromSchema(referencedSchema, openAPI, visitedSchemas));
+            }
+        } else if (schema.getProperties() != null) {
+            schema.getProperties().forEach((key, value) -> keys.add(key));
+        }
+        return keys;
+    }
+
+    private static String resolveSchema(OpenAPI openAPI, Schema<?> schema, Set<String> visitedSchemas) {
+        if (schema.get$ref() != null) {
+            String ref = schema.get$ref();
+            String schemaName = ref.substring(ref.lastIndexOf('/') + 1);
+            Schema<?> referencedSchema = openAPI.getComponents().getSchemas().get(schemaName);
+            if (referencedSchema != null) {
+                return resolveSchema(openAPI, referencedSchema, visitedSchemas);
+            }
+        }
+        return "{}";
+    }
+
+    private static String extractKeyFromLine(String line) {
+        if (line.contains("param")) {
+            return line.split("param")[1].split("=")[0].trim();
+        } else if (line.contains("\"")) {
+            return line.split("\"")[1].trim();
+        }
+        return "";
+    }
+
+    private static String sanitizeFileName(String input) {
+        return input.replaceAll("[^a-zA-Z0-9_\\-]", "_").replaceAll("\\s+", "_");
+    }
+}

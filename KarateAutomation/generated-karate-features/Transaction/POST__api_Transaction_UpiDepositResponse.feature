@@ -6,7 +6,6 @@ Background:
   * url baseURL + '/api/Transaction/UpiDepositResponse'
 
 Scenario: POST /api/Transaction/UpiDepositResponse
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added

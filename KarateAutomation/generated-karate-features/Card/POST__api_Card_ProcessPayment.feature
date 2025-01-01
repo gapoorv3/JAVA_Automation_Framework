@@ -6,13 +6,10 @@ Background:
   * url baseURL + '/api/Card/ProcessPayment'
 
 Scenario: POST /api/Card/ProcessPayment
-  * param x-api-version = '<value>' //removed
+* param x-api-version = '<value>'
   * request { //removed // removed
-    "key": "string", // removed // removed // removed
-    "value": "string" // removed // removed // removed
+    "key": "string", // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
+    "value": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
 }
   When method POST
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param value = '<value>' //added // removed // removed // removed
-  * param key = '<value>' //added // removed // removed // removed

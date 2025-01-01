@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Addressbook/Delete/{contactId}'
 
 Scenario: DELETE /api/Addressbook/Delete/{contactId}
-  * param contactId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param contactId = '<value>'
+* param x-api-version = '<value>'
   When method DELETE
   Then status 200
-  * param contactId = '<value>' //added
-  * param x-api-version = '<value>' //added

@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/Relationship/List'
 
 Scenario: GET /api/Relationship/List
-  * param filter = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param filter = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param filter = '<value>' //added
-  * param x-api-version = '<value>' //added

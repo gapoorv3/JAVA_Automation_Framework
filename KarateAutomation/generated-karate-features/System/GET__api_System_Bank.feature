@@ -6,9 +6,7 @@ Background:
   * url baseURL + '/api/System/Bank'
 
 Scenario: GET /api/System/Bank
-  * param hashId = '<value>' //removed
-  * param x-api-version = '<value>' //removed
+* param hashId = '<value>'
+* param x-api-version = '<value>'
   When method GET
   Then status 200
-  * param x-api-version = '<value>' //added
-  * param hashId = '<value>' //added

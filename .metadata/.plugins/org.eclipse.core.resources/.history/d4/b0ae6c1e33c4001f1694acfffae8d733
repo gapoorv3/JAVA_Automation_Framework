@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Security/GetCaptcha (GET)
+
+Background:
+  * url baseURL + '/api/Security/GetCaptcha'
+
+Scenario: GET /api/Security/GetCaptcha 
+* param io = 'dssx' // removed
+  * param value = '<value>' // added
+  * param x-api-version = '<value>' // added
+  When method GET
+  Then status 200
+ 
