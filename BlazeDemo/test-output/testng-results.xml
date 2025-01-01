@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-12T19:14:41 IST" name="Default suite" finished-at="2024-02-12T19:15:12 IST" duration-ms="31095">
+    <groups>
+    </groups>
+    <test started-at="2024-02-12T19:14:41 IST" name="Default test" finished-at="2024-02-12T19:15:12 IST" duration-ms="31095">
+      <class name="com.BlazeDemo.testcases.TC_bookingTicket">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.BlazeDemo.testcases.TC_bookingTicket@24855019]" started-at="2024-02-12T19:14:41 IST" name="setup" finished-at="2024-02-12T19:14:43 IST" duration-ms="1280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="ticketBooking()[pri:0, instance:com.BlazeDemo.testcases.TC_bookingTicket@24855019]" started-at="2024-02-12T19:14:43 IST" name="ticketBooking" finished-at="2024-02-12T19:15:12 IST" duration-ms="29232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ticketBooking -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.BlazeDemo.testcases.TC_bookingTicket@24855019]" started-at="2024-02-12T19:15:12 IST" name="quit" finished-at="2024-02-12T19:15:12 IST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.BlazeDemo.testcases.TC_bookingTicket -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
