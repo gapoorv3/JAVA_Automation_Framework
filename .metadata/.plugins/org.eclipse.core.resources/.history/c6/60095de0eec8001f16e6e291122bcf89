@@ -1,0 +1,14 @@
+* param hashId = '<value>' // added
+* param name = '<value>' // added
+* param type = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Category/AddProperty (PUT)
+
+Background:
+  * url baseURL + '/api/Category/AddProperty'
+
+Scenario: PUT /api/Category/AddProperty
+  When method PUT
+  Then status 200

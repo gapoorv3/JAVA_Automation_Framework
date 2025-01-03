@@ -10,7 +10,6 @@ Scenario: GET /api/Contact/Messages
 * param relatedContactId = '<value>'
 * param includeTransactions = '<value>'
 * param from = '<value>' // added
-* param from = '<value>' // added // removed
-  * param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

@@ -1,0 +1,12 @@
+* param transactionId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/TransactionReport/{transactionId} (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/TransactionReport/{transactionId}'
+
+Scenario: GET /api/Wallet/TransactionReport/{transactionId}
+  When method GET
+  Then status 200

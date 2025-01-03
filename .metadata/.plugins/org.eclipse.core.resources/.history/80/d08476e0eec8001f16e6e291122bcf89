@@ -1,0 +1,12 @@
+* param reason = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Task/AnonymizeRequest (POST)
+
+Background:
+  * url baseURL + '/api/Task/AnonymizeRequest'
+
+Scenario: POST /api/Task/AnonymizeRequest
+  When method POST
+  Then status 200

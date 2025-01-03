@@ -1,0 +1,16 @@
+* param search = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param limit = '<value>' // added
+* param offset = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/Log (GET)
+
+Background:
+  * url baseURL + '/api/Profile/Log'
+
+Scenario: GET /api/Profile/Log
+  When method GET
+  Then status 200

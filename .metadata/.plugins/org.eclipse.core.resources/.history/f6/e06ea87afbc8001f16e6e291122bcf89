@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Agent/CashRequest (POST)
+
+Background:
+  * url baseURL + '/api/Agent/CashRequest'
+
+Scenario: POST /api/Agent/CashRequest
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

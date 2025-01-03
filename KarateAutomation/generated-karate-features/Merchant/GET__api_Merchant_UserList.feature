@@ -10,7 +10,6 @@ Scenario: GET /api/Merchant/UserList
 * param filter = '<value>'
 * param limit = '<value>'
 * param offset = '<value>' // added
-* param offset = '<value>' // added // removed
-  * param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

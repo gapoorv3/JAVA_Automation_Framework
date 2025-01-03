@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/SetProductInactive (PUT)
+
+Background:
+  * url baseURL + '/api/Merchant/SetProductInactive'
+
+Scenario: PUT /api/Merchant/SetProductInactive
+  When method PUT
+  Then status 200

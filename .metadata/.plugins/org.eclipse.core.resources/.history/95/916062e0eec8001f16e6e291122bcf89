@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/ProductList (GET)
+
+Background:
+  * url baseURL + '/api/Item/ProductList'
+
+Scenario: GET /api/Item/ProductList
+  When method GET
+  Then status 200

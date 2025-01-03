@@ -1,0 +1,14 @@
+* param contactId = '<value>' // added
+* param currencyCode = '<value>' // added
+* param savings = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/Add (POST)
+
+Background:
+  * url baseURL + '/api/Wallet/Add'
+
+Scenario: POST /api/Wallet/Add
+  When method POST
+  Then status 200

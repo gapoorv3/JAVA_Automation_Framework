@@ -10,9 +10,8 @@ Scenario: GET /api/Contact/Tasks/{id}
 * param taskType = '<value>'
 * param fromDate = '<value>'
 * param toDate = '<value>' // added
-* param toDate = '<value>' // added // removed
-  * param limit = '<value>' // added
-  * param offset = '<value>' // added
-  * param x-api-version = '<value>' // added
+* param limit = '<value>' // added
+* param offset = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

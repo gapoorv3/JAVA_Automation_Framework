@@ -1,0 +1,12 @@
+* param taskId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/DeleteApiKey/{taskId} (DELETE)
+
+Background:
+  * url baseURL + '/api/Profile/DeleteApiKey/{taskId}'
+
+Scenario: DELETE /api/Profile/DeleteApiKey/{taskId}
+  When method DELETE
+  Then status 200

@@ -1,0 +1,14 @@
+* param taskId = '<value>' // added
+* param startDate = '<value>' // added
+* param endDate = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/SetAPIKeyActiveDates/{taskId} (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/SetAPIKeyActiveDates/{taskId}'
+
+Scenario: PUT /api/Profile/SetAPIKeyActiveDates/{taskId}
+  When method PUT
+  Then status 200

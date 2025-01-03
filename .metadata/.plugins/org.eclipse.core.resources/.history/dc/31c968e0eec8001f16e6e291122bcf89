@@ -1,0 +1,13 @@
+* param code = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/SetRoutingCodeSortOrder (PUT)
+
+Background:
+  * url baseURL + '/api/Merchant/SetRoutingCodeSortOrder'
+
+Scenario: PUT /api/Merchant/SetRoutingCodeSortOrder
+  When method PUT
+  Then status 200

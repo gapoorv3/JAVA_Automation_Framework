@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/RoutingCodeCurrencies (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/RoutingCodeCurrencies'
+
+Scenario: GET /api/Merchant/RoutingCodeCurrencies
+  When method GET
+  Then status 200

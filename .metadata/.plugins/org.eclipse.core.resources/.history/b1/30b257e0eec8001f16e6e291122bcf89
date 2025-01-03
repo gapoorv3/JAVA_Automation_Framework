@@ -1,0 +1,13 @@
+* param subAgentId = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Agent/SetWalletAccess (PUT)
+
+Background:
+  * url baseURL + '/api/Agent/SetWalletAccess'
+
+Scenario: PUT /api/Agent/SetWalletAccess
+  When method PUT
+  Then status 200

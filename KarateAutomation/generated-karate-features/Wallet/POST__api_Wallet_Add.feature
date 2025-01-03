@@ -10,6 +10,5 @@ Scenario: POST /api/Wallet/Add
 * param currencyCode = '<value>'
 * param savings = '<value>'
 * param x-api-version = '<value>' // added
-* param x-api-version = '<value>' // added // removed
   When method POST
   Then status 200

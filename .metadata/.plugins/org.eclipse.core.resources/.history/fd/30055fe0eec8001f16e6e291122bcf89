@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/TaxCountryCode (GET)
+
+Background:
+  * url baseURL + '/api/Contact/TaxCountryCode'
+
+Scenario: GET /api/Contact/TaxCountryCode
+  When method GET
+  Then status 200

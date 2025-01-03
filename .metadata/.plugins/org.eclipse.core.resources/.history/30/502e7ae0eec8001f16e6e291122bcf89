@@ -1,0 +1,13 @@
+* param contactId = '<value>' // added
+* param baseCurrencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/SavingsList (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/SavingsList'
+
+Scenario: GET /api/Wallet/SavingsList
+  When method GET
+  Then status 200

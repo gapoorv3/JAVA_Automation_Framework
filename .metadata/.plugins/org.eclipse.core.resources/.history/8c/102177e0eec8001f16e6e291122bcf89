@@ -1,0 +1,13 @@
+* param key = '<value>' // added
+* param reason = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Transaction/ApprovalCancel (GET)
+
+Background:
+  * url baseURL + '/api/Transaction/ApprovalCancel'
+
+Scenario: GET /api/Transaction/ApprovalCancel
+  When method GET
+  Then status 200

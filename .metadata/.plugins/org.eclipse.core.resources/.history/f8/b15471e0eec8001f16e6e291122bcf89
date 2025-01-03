@@ -1,0 +1,15 @@
+* param hashId = '<value>' // added
+* param accountId = '<value>' // added
+* param contactId = '<value>' // added
+* param amount = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Rule/Validate (GET)
+
+Background:
+  * url baseURL + '/api/Rule/Validate'
+
+Scenario: GET /api/Rule/Validate
+  When method GET
+  Then status 200

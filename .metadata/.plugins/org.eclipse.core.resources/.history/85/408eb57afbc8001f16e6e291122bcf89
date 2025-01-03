@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Contact/SetPostalAddress (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/SetPostalAddress'
+
+Scenario: PUT /api/Contact/SetPostalAddress
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method PUT
+  Then status 200

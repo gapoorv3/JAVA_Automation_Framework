@@ -1,0 +1,14 @@
+* param key = '<value>' // added
+* param pin = '<value>' // added
+* param once = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Transaction/ApprovalAccept (GET)
+
+Background:
+  * url baseURL + '/api/Transaction/ApprovalAccept'
+
+Scenario: GET /api/Transaction/ApprovalAccept
+  When method GET
+  Then status 200

@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/BankWithdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/BankWithdrawal'
+
+Scenario: POST /api/Transaction/BankWithdrawal
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

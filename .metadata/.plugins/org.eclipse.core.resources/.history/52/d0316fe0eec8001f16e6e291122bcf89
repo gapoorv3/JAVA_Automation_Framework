@@ -1,0 +1,12 @@
+* param relatedContactId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Relationship/GetWalletAccess (GET)
+
+Background:
+  * url baseURL + '/api/Relationship/GetWalletAccess'
+
+Scenario: GET /api/Relationship/GetWalletAccess
+  When method GET
+  Then status 200

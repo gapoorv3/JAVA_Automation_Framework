@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param recipientId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/MessagesSetRead (PUT)
+
+Background:
+  * url baseURL + '/api/Contact/MessagesSetRead'
+
+Scenario: PUT /api/Contact/MessagesSetRead
+  When method PUT
+  Then status 200

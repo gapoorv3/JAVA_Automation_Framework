@@ -1,0 +1,20 @@
+# Auto-generated feature file
+
+Feature: /api/Wallet/Transactions/{accountId} (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/Transactions/{accountId}'
+
+Scenario: GET /api/Wallet/Transactions/{accountId}
+* param accountId = '<value>'
+* param fromDate = '<value>'
+* param toDate = '<value>'
+* param excludeBroughtForward = '<value>'
+* param limit = '<value>'
+* param offset = '<value>'
+* param includeLogs = '<value>'
+* param excludePending = '<value>'
+* param baseCurrencyCode = '<value>'
+* param x-api-version = '<value>'
+  When method GET
+  Then status 200

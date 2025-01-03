@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/SetProductDescription (PUT)
+
+Background:
+  * url baseURL + '/api/Item/SetProductDescription'
+
+Scenario: PUT /api/Item/SetProductDescription
+  When method PUT
+  Then status 200

@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Profile/Add (POST)
+
+Background:
+  * url baseURL + '/api/Profile/Add'
+
+Scenario: POST /api/Profile/Add
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

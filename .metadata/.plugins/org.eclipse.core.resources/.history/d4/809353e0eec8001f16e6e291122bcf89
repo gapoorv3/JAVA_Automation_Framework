@@ -1,0 +1,12 @@
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Addressbook/Info (GET)
+
+Background:
+  * url baseURL + '/api/Addressbook/Info'
+
+Scenario: GET /api/Addressbook/Info
+  When method GET
+  Then status 200

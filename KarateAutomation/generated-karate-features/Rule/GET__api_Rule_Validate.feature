@@ -10,7 +10,6 @@ Scenario: GET /api/Rule/Validate
 * param accountId = '<value>'
 * param contactId = '<value>'
 * param amount = '<value>' // added
-* param amount = '<value>' // added // removed
-  * param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

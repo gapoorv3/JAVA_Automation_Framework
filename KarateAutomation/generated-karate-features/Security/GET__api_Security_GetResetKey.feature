@@ -6,10 +6,9 @@ Background:
   * url baseURL + '/api/Security/GetResetKey'
 
 Scenario: GET /api/Security/GetResetKey
-* param value = '<value>'
 * param otp = '<value>'
 * param captcha = '<value>'
 * param x-api-version = '<value>' // added
-* param x-api-version = '<value>' // added // removed
+* param value = '<value>' // added
   When method GET
   Then status 200

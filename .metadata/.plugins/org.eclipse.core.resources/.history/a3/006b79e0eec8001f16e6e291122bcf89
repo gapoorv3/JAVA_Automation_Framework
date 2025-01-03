@@ -1,0 +1,12 @@
+* param accountId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/ClearNewTransactionCount/{accountId} (DELETE)
+
+Background:
+  * url baseURL + '/api/Wallet/ClearNewTransactionCount/{accountId}'
+
+Scenario: DELETE /api/Wallet/ClearNewTransactionCount/{accountId}
+  When method DELETE
+  Then status 200

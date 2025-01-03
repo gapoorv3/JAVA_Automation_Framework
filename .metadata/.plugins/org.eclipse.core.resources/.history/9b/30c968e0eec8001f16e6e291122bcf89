@@ -1,0 +1,13 @@
+* param code = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/SetRoutingCodeInactive (PUT)
+
+Background:
+  * url baseURL + '/api/Merchant/SetRoutingCodeInactive'
+
+Scenario: PUT /api/Merchant/SetRoutingCodeInactive
+  When method PUT
+  Then status 200

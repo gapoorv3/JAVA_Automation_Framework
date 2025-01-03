@@ -1,0 +1,12 @@
+* param currencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Card/IsCurrencySupported (GET)
+
+Background:
+  * url baseURL + '/api/Card/IsCurrencySupported'
+
+Scenario: GET /api/Card/IsCurrencySupported
+  When method GET
+  Then status 200

@@ -1,0 +1,19 @@
+* param contactId = '<value>' // added
+* param brand = '<value>' // added
+* param search = '<value>' // added
+* param status = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param limit = '<value>' // added
+* param offset = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/CardTransactionList (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/CardTransactionList'
+
+Scenario: GET /api/Merchant/CardTransactionList
+  When method GET
+  Then status 200

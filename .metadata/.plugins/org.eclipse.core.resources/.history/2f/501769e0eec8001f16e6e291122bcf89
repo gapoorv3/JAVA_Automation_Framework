@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Preference/NotificationCountClear (DELETE)
+
+Background:
+  * url baseURL + '/api/Preference/NotificationCountClear'
+
+Scenario: DELETE /api/Preference/NotificationCountClear
+  When method DELETE
+  Then status 200

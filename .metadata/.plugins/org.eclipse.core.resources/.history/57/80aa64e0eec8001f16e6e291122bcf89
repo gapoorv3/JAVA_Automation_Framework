@@ -1,0 +1,16 @@
+* param id = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param limit = '<value>' // added
+* param format = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/CardDepositReport/{id} (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/CardDepositReport/{id}'
+
+Scenario: GET /api/Merchant/CardDepositReport/{id}
+  When method GET
+  Then status 200

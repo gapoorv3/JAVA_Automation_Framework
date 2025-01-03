@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/SetProductReference (PUT)
+
+Background:
+  * url baseURL + '/api/Item/SetProductReference'
+
+Scenario: PUT /api/Item/SetProductReference
+  When method PUT
+  Then status 200

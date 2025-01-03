@@ -1,0 +1,12 @@
+* param baseCurrencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/GetFull (GET)
+
+Background:
+  * url baseURL + '/api/Profile/GetFull'
+
+Scenario: GET /api/Profile/GetFull
+  When method GET
+  Then status 200

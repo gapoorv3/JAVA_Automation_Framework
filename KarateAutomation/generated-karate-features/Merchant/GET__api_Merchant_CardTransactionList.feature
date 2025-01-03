@@ -10,11 +10,10 @@ Scenario: GET /api/Merchant/CardTransactionList
 * param brand = '<value>'
 * param search = '<value>'
 * param status = '<value>' // added
-* param status = '<value>' // added // removed
-  * param fromDate = '<value>' // added
-  * param toDate = '<value>' // added
-  * param limit = '<value>' // added
-  * param offset = '<value>' // added
-  * param x-api-version = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param limit = '<value>' // added
+* param offset = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

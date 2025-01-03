@@ -10,6 +10,5 @@ Scenario: GET /api/Transaction/ApprovalAccept
 * param pin = '<value>'
 * param once = '<value>'
 * param x-api-version = '<value>' // added
-* param x-api-version = '<value>' // added // removed
   When method GET
   Then status 200

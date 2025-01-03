@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param filter = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Task/List/{id} (GET)
+
+Background:
+  * url baseURL + '/api/Task/List/{id}'
+
+Scenario: GET /api/Task/List/{id}
+  When method GET
+  Then status 200

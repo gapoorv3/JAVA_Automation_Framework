@@ -10,8 +10,7 @@ Scenario: GET /api/Agent/StatementReport/{accountId}
 * param fromDate = '<value>'
 * param toDate = '<value>'
 * param limit = '<value>' // added
-* param limit = '<value>' // added // removed
-  * param format = '<value>' // added
-  * param x-api-version = '<value>' // added
+* param format = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Agent/AgentSendPayment (POST)
+
+Background:
+  * url baseURL + '/api/Agent/AgentSendPayment'
+
+Scenario: POST /api/Agent/AgentSendPayment
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

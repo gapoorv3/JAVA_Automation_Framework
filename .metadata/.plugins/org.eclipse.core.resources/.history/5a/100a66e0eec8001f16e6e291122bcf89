@@ -1,0 +1,14 @@
+* param contactId = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/PendingLogCount (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/PendingLogCount'
+
+Scenario: GET /api/Merchant/PendingLogCount
+  When method GET
+  Then status 200

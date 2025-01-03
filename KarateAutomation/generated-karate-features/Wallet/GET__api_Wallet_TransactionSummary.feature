@@ -10,7 +10,6 @@ Scenario: GET /api/Wallet/TransactionSummary
 * param fromDate = '<value>'
 * param toDate = '<value>'
 * param grain = '<value>' // added
-* param grain = '<value>' // added // removed
-  * param x-api-version = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

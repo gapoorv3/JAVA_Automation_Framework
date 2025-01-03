@@ -1,0 +1,14 @@
+* param value = '<value>' // added
+* param otp = '<value>' // added
+* param captcha = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Security/GetResetKey (GET)
+
+Background:
+  * url baseURL + '/api/Security/GetResetKey'
+
+Scenario: GET /api/Security/GetResetKey
+  When method GET
+  Then status 200

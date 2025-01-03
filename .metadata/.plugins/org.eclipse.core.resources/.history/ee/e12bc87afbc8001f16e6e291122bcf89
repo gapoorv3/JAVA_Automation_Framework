@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/GetFees (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/GetFees'
+
+Scenario: POST /api/Transaction/GetFees
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

@@ -1,0 +1,13 @@
+* param relatedContactId = '<value>' // added
+* param access = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Relationship/SetAccess (PUT)
+
+Background:
+  * url baseURL + '/api/Relationship/SetAccess'
+
+Scenario: PUT /api/Relationship/SetAccess
+  When method PUT
+  Then status 200

@@ -1,0 +1,12 @@
+* param id = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/ProductQRCode (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/ProductQRCode'
+
+Scenario: GET /api/Merchant/ProductQRCode
+  When method GET
+  Then status 200

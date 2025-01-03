@@ -1,0 +1,13 @@
+* param accountId = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/SetInactive/{accountId} (PUT)
+
+Background:
+  * url baseURL + '/api/Wallet/SetInactive/{accountId}'
+
+Scenario: PUT /api/Wallet/SetInactive/{accountId}
+  When method PUT
+  Then status 200

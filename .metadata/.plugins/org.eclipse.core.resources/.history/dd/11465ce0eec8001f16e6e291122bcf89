@@ -1,0 +1,12 @@
+* param hashId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Category/GetModel (GET)
+
+Background:
+  * url baseURL + '/api/Category/GetModel'
+
+Scenario: GET /api/Category/GetModel
+  When method GET
+  Then status 200

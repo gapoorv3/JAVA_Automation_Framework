@@ -1,0 +1,12 @@
+* param hashId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Category/DeleteProperty/{hashId} (DELETE)
+
+Background:
+  * url baseURL + '/api/Category/DeleteProperty/{hashId}'
+
+Scenario: DELETE /api/Category/DeleteProperty/{hashId}
+  When method DELETE
+  Then status 200

@@ -1,0 +1,13 @@
+* param taskId = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/SetApiKeyInactive (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/SetApiKeyInactive'
+
+Scenario: PUT /api/Profile/SetApiKeyInactive
+  When method PUT
+  Then status 200

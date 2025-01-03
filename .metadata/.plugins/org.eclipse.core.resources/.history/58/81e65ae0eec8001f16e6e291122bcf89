@@ -1,0 +1,15 @@
+* param key = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Card/ProcessPaymentRedirect (POST)
+
+Background:
+  * url baseURL + '/api/Card/ProcessPaymentRedirect'
+
+Scenario: POST /api/Card/ProcessPaymentRedirect
+  * request { //removed // removed
+    "encData": "string" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
+}
+  When method POST
+  Then status 200

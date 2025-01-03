@@ -1,0 +1,14 @@
+* param value = '<value>' // added
+* param otp = '<value>' // added
+* param captcha = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Security/ActivateAccount (PUT)
+
+Background:
+  * url baseURL + '/api/Security/ActivateAccount'
+
+Scenario: PUT /api/Security/ActivateAccount
+  When method PUT
+  Then status 200

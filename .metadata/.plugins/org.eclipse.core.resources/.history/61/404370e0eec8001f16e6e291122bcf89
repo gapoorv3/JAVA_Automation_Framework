@@ -1,0 +1,12 @@
+* param relatedContactId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Relationship/SetStatusBlocked (PUT)
+
+Background:
+  * url baseURL + '/api/Relationship/SetStatusBlocked'
+
+Scenario: PUT /api/Relationship/SetStatusBlocked
+  When method PUT
+  Then status 200

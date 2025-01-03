@@ -1,0 +1,12 @@
+* param hashId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Rule/Get (GET)
+
+Background:
+  * url baseURL + '/api/Rule/Get'
+
+Scenario: GET /api/Rule/Get
+  When method GET
+  Then status 200

@@ -10,8 +10,7 @@ Scenario: GET /api/Merchant/TransactionList
 * param fromDate = '<value>'
 * param toDate = '<value>'
 * param limit = '<value>' // added
-* param limit = '<value>' // added // removed
-  * param offset = '<value>' // added
-  * param x-api-version = '<value>' // added
+* param offset = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

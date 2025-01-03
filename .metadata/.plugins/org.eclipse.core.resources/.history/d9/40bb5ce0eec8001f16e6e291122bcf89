@@ -1,0 +1,12 @@
+* param name = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Category/AddItem (POST)
+
+Background:
+  * url baseURL + '/api/Category/AddItem'
+
+Scenario: POST /api/Category/AddItem
+  When method POST
+  Then status 200

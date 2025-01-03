@@ -6,8 +6,6 @@ import io.swagger.v3.oas.models.media.*;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.SwaggerParseResult;
 import io.swagger.v3.oas.models.parameters.Parameter;
-
-
 import java.io.*;
 import java.util.*;
 
@@ -203,16 +201,21 @@ public class KarateFeatureGenerator {
         }
     }
 
-    // Helper method to extract the parameter name from a line
+//    // Helper method to extract the parameter name from a line    
     private static String extractParameterName(String line) {
-        if (line.startsWith("* param ")) {
-            String[] parts = line.trim().split("\\s+");
-            if (parts.length > 2) {
-                return parts[2].replace("=", "").trim();
+        if (line.trim().startsWith("* param ")) {
+            // Extract the portion after "* param"
+            String parameterPart = line.trim().substring(7).trim(); // Remove "* param "
+            // Split by space and check the format
+            String[] parts = parameterPart.split("\\s+");
+            if (parts.length > 0) {
+                // Extract the name before the "="
+                return parts[0].replace("=", "").trim();
             }
         }
         return null;
     }
+
 
     // Helper method to extract the key from a JSON line
     private static String extractKeyFromLine(String line) {

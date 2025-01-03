@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/GetBusiness (GET)
+
+Background:
+  * url baseURL + '/api/Contact/GetBusiness'
+
+Scenario: GET /api/Contact/GetBusiness
+  When method GET
+  Then status 200

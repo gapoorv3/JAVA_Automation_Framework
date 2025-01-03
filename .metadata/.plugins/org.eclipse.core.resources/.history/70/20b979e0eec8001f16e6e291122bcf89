@@ -1,0 +1,14 @@
+* param contact = '<value>' // added
+* param currencyCode = '<value>' // added
+* param includeAll = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/Info (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/Info'
+
+Scenario: GET /api/Wallet/Info
+  When method GET
+  Then status 200

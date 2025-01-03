@@ -1,0 +1,12 @@
+* param key = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Transaction/CheckStatus (GET)
+
+Background:
+  * url baseURL + '/api/Transaction/CheckStatus'
+
+Scenario: GET /api/Transaction/CheckStatus
+  When method GET
+  Then status 200

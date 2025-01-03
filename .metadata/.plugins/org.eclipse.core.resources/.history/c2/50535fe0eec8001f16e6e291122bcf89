@@ -1,0 +1,13 @@
+* param message = '<value>' // added
+* param recipientId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/SendMessage (POST)
+
+Background:
+  * url baseURL + '/api/Contact/SendMessage'
+
+Scenario: POST /api/Contact/SendMessage
+  When method POST
+  Then status 200

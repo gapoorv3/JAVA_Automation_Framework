@@ -1,0 +1,12 @@
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/SetUserName (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/SetUserName'
+
+Scenario: PUT /api/Profile/SetUserName
+  When method PUT
+  Then status 200

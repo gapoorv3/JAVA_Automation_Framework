@@ -1,0 +1,12 @@
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Preference/SetVisibleByUserName (PUT)
+
+Background:
+  * url baseURL + '/api/Preference/SetVisibleByUserName'
+
+Scenario: PUT /api/Preference/SetVisibleByUserName
+  When method PUT
+  Then status 200

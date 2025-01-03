@@ -1,0 +1,15 @@
+* param contactId = '<value>' // added
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param grain = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/UserSummary (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/UserSummary'
+
+Scenario: GET /api/Merchant/UserSummary
+  When method GET
+  Then status 200

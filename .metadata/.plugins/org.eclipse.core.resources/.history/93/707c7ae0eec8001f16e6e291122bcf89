@@ -1,0 +1,13 @@
+* param fromDate = '<value>' // added
+* param toDate = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/TotalWithdrawals (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/TotalWithdrawals'
+
+Scenario: GET /api/Wallet/TotalWithdrawals
+  When method GET
+  Then status 200

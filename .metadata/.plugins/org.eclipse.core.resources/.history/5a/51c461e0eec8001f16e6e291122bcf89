@@ -1,0 +1,12 @@
+* param token = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/GetProductOwner (GET)
+
+Background:
+  * url baseURL + '/api/Item/GetProductOwner'
+
+Scenario: GET /api/Item/GetProductOwner
+  When method GET
+  Then status 200

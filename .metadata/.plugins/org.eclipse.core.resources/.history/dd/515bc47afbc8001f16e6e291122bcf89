@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Security/Register (POST)
+
+Background:
+  * url baseURL + '/api/Security/Register'
+
+Scenario: POST /api/Security/Register
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

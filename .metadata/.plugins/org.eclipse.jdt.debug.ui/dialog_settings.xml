@@ -6,7 +6,7 @@
 	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode/&gt;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=KarateAutomation/\/Users\/apoorvgupta\/.m2\/repository\/io\/swagger\/swagger-compat-spec-parser\/1.0.70\/swagger-compat-spec-parser-1.0.70.jar=/maven.pomderived=/true=/=/maven.groupId=/io.swagger=/=/maven.artifactId=/swagger-compat-spec-parser=/=/maven.version=/1.0.70=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&amp;lt;io.swagger.transform.util(APIFileDownload.class[APIFileDownload&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="600"/>

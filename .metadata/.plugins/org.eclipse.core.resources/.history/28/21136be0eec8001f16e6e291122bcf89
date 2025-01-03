@@ -1,0 +1,12 @@
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Preference/SetPayFeesFromSavings (PUT)
+
+Background:
+  * url baseURL + '/api/Preference/SetPayFeesFromSavings'
+
+Scenario: PUT /api/Preference/SetPayFeesFromSavings
+  When method PUT
+  Then status 200

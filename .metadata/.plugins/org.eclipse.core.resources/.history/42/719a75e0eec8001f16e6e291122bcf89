@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/System/FaqList (GET)
+
+Background:
+  * url baseURL + '/api/System/FaqList'
+
+Scenario: GET /api/System/FaqList
+  When method GET
+  Then status 200

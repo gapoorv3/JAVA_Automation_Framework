@@ -1,0 +1,13 @@
+* param value = '<value>' // added
+* param captcha = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Security/ValidateCaptcha (POST)
+
+Background:
+  * url baseURL + '/api/Security/ValidateCaptcha'
+
+Scenario: POST /api/Security/ValidateCaptcha
+  When method POST
+  Then status 200

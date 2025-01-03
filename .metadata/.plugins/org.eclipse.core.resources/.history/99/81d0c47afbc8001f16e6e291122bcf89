@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Security/RenewToken (PUT)
+
+Background:
+  * url baseURL + '/api/Security/RenewToken'
+
+Scenario: PUT /api/Security/RenewToken
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method PUT
+  Then status 200

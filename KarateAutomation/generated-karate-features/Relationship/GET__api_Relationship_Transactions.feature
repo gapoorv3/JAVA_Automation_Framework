@@ -10,6 +10,5 @@ Scenario: GET /api/Relationship/Transactions
 * param currencyCode = '<value>'
 * param from = '<value>'
 * param x-api-version = '<value>' // added
-* param x-api-version = '<value>' // added // removed
   When method GET
   Then status 200

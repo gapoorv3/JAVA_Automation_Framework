@@ -1,0 +1,11 @@
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/GetAuthenticatorCode (GET)
+
+Background:
+  * url baseURL + '/api/Profile/GetAuthenticatorCode'
+
+Scenario: GET /api/Profile/GetAuthenticatorCode
+  When method GET
+  Then status 200

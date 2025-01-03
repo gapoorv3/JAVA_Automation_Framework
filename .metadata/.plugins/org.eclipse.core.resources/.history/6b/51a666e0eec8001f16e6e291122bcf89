@@ -1,0 +1,12 @@
+* param contactId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/RoutingCodes (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/RoutingCodes'
+
+Scenario: GET /api/Merchant/RoutingCodes
+  When method GET
+  Then status 200

@@ -1,0 +1,12 @@
+* param type = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Report/Get (GET)
+
+Background:
+  * url baseURL + '/api/Report/Get'
+
+Scenario: GET /api/Report/Get
+  When method GET
+  Then status 200

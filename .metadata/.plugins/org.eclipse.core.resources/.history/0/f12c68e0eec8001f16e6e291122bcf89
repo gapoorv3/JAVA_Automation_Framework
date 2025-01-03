@@ -1,0 +1,14 @@
+* param id = '<value>' // added
+* param amount = '<value>' // added
+* param currencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/SetProductAmount (PUT)
+
+Background:
+  * url baseURL + '/api/Merchant/SetProductAmount'
+
+Scenario: PUT /api/Merchant/SetProductAmount
+  When method PUT
+  Then status 200

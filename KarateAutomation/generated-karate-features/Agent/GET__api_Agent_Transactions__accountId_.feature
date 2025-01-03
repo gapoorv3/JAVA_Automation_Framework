@@ -10,10 +10,9 @@ Scenario: GET /api/Agent/Transactions/{accountId}
 * param fromDate = '<value>'
 * param toDate = '<value>'
 * param excludeBroughtForward = '<value>' // added
-* param excludeBroughtForward = '<value>' // added // removed
-  * param limit = '<value>' // added
-  * param offset = '<value>' // added
-  * param baseCurrencyCode = '<value>' // added
-  * param x-api-version = '<value>' // added
+* param limit = '<value>' // added
+* param offset = '<value>' // added
+* param baseCurrencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
   When method GET
   Then status 200

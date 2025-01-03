@@ -1,0 +1,15 @@
+# Auto-generated feature file
+
+Feature: /api/Transaction/PayNowWithdrawal (POST)
+
+Background:
+  * url baseURL + '/api/Transaction/PayNowWithdrawal'
+
+Scenario: POST /api/Transaction/PayNowWithdrawal
+* param useApprovalProcess = '<value>'
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

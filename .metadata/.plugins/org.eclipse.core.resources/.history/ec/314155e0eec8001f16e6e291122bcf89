@@ -1,0 +1,12 @@
+* param accountId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Agent/MonthlyBalances (GET)
+
+Background:
+  * url baseURL + '/api/Agent/MonthlyBalances'
+
+Scenario: GET /api/Agent/MonthlyBalances
+  When method GET
+  Then status 200

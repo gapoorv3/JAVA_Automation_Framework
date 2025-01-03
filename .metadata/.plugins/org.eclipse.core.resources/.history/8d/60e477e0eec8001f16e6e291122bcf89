@@ -1,0 +1,13 @@
+* param accountId = '<value>' // added
+* param reference = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Transaction/Status/{accountId} (GET)
+
+Background:
+  * url baseURL + '/api/Transaction/Status/{accountId}'
+
+Scenario: GET /api/Transaction/Status/{accountId}
+  When method GET
+  Then status 200

@@ -1,0 +1,13 @@
+* param id = '<value>' // added
+* param deleteAll = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/DeleteMessage (POST)
+
+Background:
+  * url baseURL + '/api/Contact/DeleteMessage'
+
+Scenario: POST /api/Contact/DeleteMessage
+  When method POST
+  Then status 200

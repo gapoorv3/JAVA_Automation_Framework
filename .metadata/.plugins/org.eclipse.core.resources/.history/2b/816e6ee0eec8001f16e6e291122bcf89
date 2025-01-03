@@ -1,0 +1,14 @@
+* param otpType = '<value>' // added
+* param otp = '<value>' // added
+* param ttl = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/Unlock (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/Unlock'
+
+Scenario: PUT /api/Profile/Unlock
+  When method PUT
+  Then status 200

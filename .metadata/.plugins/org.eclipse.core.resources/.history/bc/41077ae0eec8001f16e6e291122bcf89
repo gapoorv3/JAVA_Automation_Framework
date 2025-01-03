@@ -1,0 +1,12 @@
+* param accountId = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Wallet/Owner (GET)
+
+Background:
+  * url baseURL + '/api/Wallet/Owner'
+
+Scenario: GET /api/Wallet/Owner
+  When method GET
+  Then status 200

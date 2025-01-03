@@ -1,0 +1,14 @@
+* param accountId = '<value>' // added
+* param amount = '<value>' // added
+* param description = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Task/OneOffWithdrawalAmountRequest/{accountId} (GET)
+
+Background:
+  * url baseURL + '/api/Task/OneOffWithdrawalAmountRequest/{accountId}'
+
+Scenario: GET /api/Task/OneOffWithdrawalAmountRequest/{accountId}
+  When method GET
+  Then status 200

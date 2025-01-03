@@ -1,0 +1,12 @@
+* param currencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/System/BankCount (GET)
+
+Background:
+  * url baseURL + '/api/System/BankCount'
+
+Scenario: GET /api/System/BankCount
+  When method GET
+  Then status 200

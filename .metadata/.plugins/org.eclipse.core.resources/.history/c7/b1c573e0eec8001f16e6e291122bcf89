@@ -1,0 +1,12 @@
+* param otpType = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Security/SendOtp (POST)
+
+Background:
+  * url baseURL + '/api/Security/SendOtp'
+
+Scenario: POST /api/Security/SendOtp
+  When method POST
+  Then status 200

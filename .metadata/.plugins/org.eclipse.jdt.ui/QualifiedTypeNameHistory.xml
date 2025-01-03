@@ -30,7 +30,6 @@
     <fullyQualifiedTypeName name="test.XprizoTest"/>
     <fullyQualifiedTypeName name="org.zaproxy.clientapi.core.ClientApi"/>
     <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="pages.SendMoney"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
     <fullyQualifiedTypeName name="org.zaproxy.clientapi.gen.AlertFilter"/>
@@ -57,4 +56,5 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="com.intuit.karate.junit5.Karate"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

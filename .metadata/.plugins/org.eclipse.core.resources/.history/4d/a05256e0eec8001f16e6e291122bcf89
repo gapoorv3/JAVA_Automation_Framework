@@ -1,0 +1,12 @@
+* param baseCurrencyCode = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Agent/Wallets (GET)
+
+Background:
+  * url baseURL + '/api/Agent/Wallets'
+
+Scenario: GET /api/Agent/Wallets
+  When method GET
+  Then status 200

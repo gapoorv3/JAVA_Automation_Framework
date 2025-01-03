@@ -1,0 +1,14 @@
+* param contactId = '<value>' // added
+* param encData = '<value>' // added
+* param redirect = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Card/RequestPayment (POST)
+
+Background:
+  * url baseURL + '/api/Card/RequestPayment'
+
+Scenario: POST /api/Card/RequestPayment
+  When method POST
+  Then status 200

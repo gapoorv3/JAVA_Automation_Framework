@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Security/ValidateUser (POST)
+
+Background:
+  * url baseURL + '/api/Security/ValidateUser'
+
+Scenario: POST /api/Security/ValidateUser
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

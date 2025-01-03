@@ -1,0 +1,13 @@
+* param key = '<value>' // added
+* param token = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/CheckProductPurchaseStatus (GET)
+
+Background:
+  * url baseURL + '/api/Item/CheckProductPurchaseStatus'
+
+Scenario: GET /api/Item/CheckProductPurchaseStatus
+  When method GET
+  Then status 200

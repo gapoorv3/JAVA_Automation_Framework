@@ -1,0 +1,13 @@
+* param taskId = '<value>' // added
+* param ipAddress = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/RemoveAPIKeyIp/{taskId} (DELETE)
+
+Background:
+  * url baseURL + '/api/Profile/RemoveAPIKeyIp/{taskId}'
+
+Scenario: DELETE /api/Profile/RemoveAPIKeyIp/{taskId}
+  When method DELETE
+  Then status 200

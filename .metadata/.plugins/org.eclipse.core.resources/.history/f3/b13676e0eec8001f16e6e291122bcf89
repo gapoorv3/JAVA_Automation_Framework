@@ -1,0 +1,15 @@
+* param id = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Task/AddAttachment/{id} (POST)
+
+Background:
+  * url baseURL + '/api/Task/AddAttachment/{id}'
+
+Scenario: POST /api/Task/AddAttachment/{id}
+  * request { //removed // removed
+    "file": "<value>" // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed // removed
+}
+  When method POST
+  Then status 200

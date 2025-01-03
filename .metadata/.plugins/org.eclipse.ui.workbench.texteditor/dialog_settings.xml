@@ -6,9 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="extractKeyFromLine"/>
+		<item key="selection" value="extractParameterName"/>
 		<list key="findhistory">
+			<item value="extractParameterName"/>
+			<item value="extractKeysFromSchema"/>
 			<item value="extractKeyFromLine"/>
+			<item value="// added"/>
+			<item value="swaggerParameters"/>
 			<item value="//"/>
 			<item value="//.*"/>
 		</list>
@@ -16,10 +20,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="608"/>
-		<item key="DIALOG_Y_ORIGIN" value="408"/>
+		<item key="DIALOG_X_ORIGIN" value="93"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="336"/>
-		<item key="DIALOG_HEIGHT" value="400"/>
+		<item key="DIALOG_HEIGHT" value="791"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>

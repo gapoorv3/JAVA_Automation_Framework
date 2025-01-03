@@ -1,0 +1,12 @@
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Preference/SetLanguage (PUT)
+
+Background:
+  * url baseURL + '/api/Preference/SetLanguage'
+
+Scenario: PUT /api/Preference/SetLanguage
+  When method PUT
+  Then status 200

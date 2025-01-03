@@ -1,0 +1,12 @@
+* param pin = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/SetPin (PUT)
+
+Background:
+  * url baseURL + '/api/Profile/SetPin'
+
+Scenario: PUT /api/Profile/SetPin
+  When method PUT
+  Then status 200

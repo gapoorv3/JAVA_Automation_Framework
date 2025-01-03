@@ -1,0 +1,14 @@
+# Auto-generated feature file
+
+Feature: /api/Security/GoogleLogin (POST)
+
+Background:
+  * url baseURL + '/api/Security/GoogleLogin'
+
+Scenario: POST /api/Security/GoogleLogin
+* param x-api-version = '<value>'
+  * request {}
+  * request {}
+  * request {}
+  When method POST
+  Then status 200

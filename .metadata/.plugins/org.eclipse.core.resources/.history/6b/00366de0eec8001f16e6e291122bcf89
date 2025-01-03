@@ -1,0 +1,12 @@
+* param id = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Profile/QRCode (GET)
+
+Background:
+  * url baseURL + '/api/Profile/QRCode'
+
+Scenario: GET /api/Profile/QRCode
+  When method GET
+  Then status 200

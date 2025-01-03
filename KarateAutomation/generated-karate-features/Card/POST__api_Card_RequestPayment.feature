@@ -10,6 +10,5 @@ Scenario: POST /api/Card/RequestPayment
 * param encData = '<value>'
 * param redirect = '<value>'
 * param x-api-version = '<value>' // added
-* param x-api-version = '<value>' // added // removed
   When method POST
   Then status 200

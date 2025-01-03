@@ -1,0 +1,12 @@
+* param id = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/Banks (GET)
+
+Background:
+  * url baseURL + '/api/Contact/Banks'
+
+Scenario: GET /api/Contact/Banks
+  When method GET
+  Then status 200

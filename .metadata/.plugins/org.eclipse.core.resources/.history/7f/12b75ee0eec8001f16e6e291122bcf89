@@ -1,0 +1,15 @@
+* param id = '<value>' // added
+* param relatedContactId = '<value>' // added
+* param includeTransactions = '<value>' // added
+* param from = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Contact/Messages (GET)
+
+Background:
+  * url baseURL + '/api/Contact/Messages'
+
+Scenario: GET /api/Contact/Messages
+  When method GET
+  Then status 200

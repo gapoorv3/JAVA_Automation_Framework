@@ -1,0 +1,12 @@
+* param id = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Item/DeleteProduct (DELETE)
+
+Background:
+  * url baseURL + '/api/Item/DeleteProduct'
+
+Scenario: DELETE /api/Item/DeleteProduct
+  When method DELETE
+  Then status 200

@@ -1,0 +1,13 @@
+* param contactId = '<value>' // added
+* param value = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Addressbook/SetUserKYCCompliant/{contactId} (PUT)
+
+Background:
+  * url baseURL + '/api/Addressbook/SetUserKYCCompliant/{contactId}'
+
+Scenario: PUT /api/Addressbook/SetUserKYCCompliant/{contactId}
+  When method PUT
+  Then status 200

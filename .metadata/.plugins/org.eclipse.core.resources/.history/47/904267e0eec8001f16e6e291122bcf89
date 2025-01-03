@@ -1,0 +1,13 @@
+* param contactId = '<value>' // added
+* param reference = '<value>' // added
+* param x-api-version = '<value>' // added
+# Auto-generated feature file
+
+Feature: /api/Merchant/User (GET)
+
+Background:
+  * url baseURL + '/api/Merchant/User'
+
+Scenario: GET /api/Merchant/User
+  When method GET
+  Then status 200
